@@ -1,0 +1,6 @@
+add_subdirectory(net_example)
+add_subdirectory(caches)
+add_subdirectory(testjson)
+add_subdirectory(client)
+add_subdirectory(test_coServer)
+add_subdirectory(test_slave_server)
