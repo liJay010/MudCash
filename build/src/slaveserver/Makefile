@@ -130,12 +130,42 @@ slaveserver/fast:
 	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver.dir/build.make src/slaveserver/CMakeFiles/slaveserver.dir/build
 .PHONY : slaveserver/fast
 
+# Convenience name for target.
+src/slaveserver/CMakeFiles/slaveserver1.dir/rule:
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/slaveserver/CMakeFiles/slaveserver1.dir/rule
+.PHONY : src/slaveserver/CMakeFiles/slaveserver1.dir/rule
+
+# Convenience name for target.
+slaveserver1: src/slaveserver/CMakeFiles/slaveserver1.dir/rule
+.PHONY : slaveserver1
+
+# fast build rule for target.
+slaveserver1/fast:
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/build
+.PHONY : slaveserver1/fast
+
+# Convenience name for target.
+src/slaveserver/CMakeFiles/slaveserver2.dir/rule:
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/slaveserver/CMakeFiles/slaveserver2.dir/rule
+.PHONY : src/slaveserver/CMakeFiles/slaveserver2.dir/rule
+
+# Convenience name for target.
+slaveserver2: src/slaveserver/CMakeFiles/slaveserver2.dir/rule
+.PHONY : slaveserver2
+
+# fast build rule for target.
+slaveserver2/fast:
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/build
+.PHONY : slaveserver2/fast
+
 __/client/caclient.o: __/client/caclient.cpp.o
 .PHONY : __/client/caclient.o
 
 # target to build an object file
 __/client/caclient.cpp.o:
 	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver.dir/build.make src/slaveserver/CMakeFiles/slaveserver.dir/__/client/caclient.cpp.o
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/__/client/caclient.cpp.o
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/__/client/caclient.cpp.o
 .PHONY : __/client/caclient.cpp.o
 
 __/client/caclient.i: __/client/caclient.cpp.i
@@ -144,6 +174,8 @@ __/client/caclient.i: __/client/caclient.cpp.i
 # target to preprocess a source file
 __/client/caclient.cpp.i:
 	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver.dir/build.make src/slaveserver/CMakeFiles/slaveserver.dir/__/client/caclient.cpp.i
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/__/client/caclient.cpp.i
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/__/client/caclient.cpp.i
 .PHONY : __/client/caclient.cpp.i
 
 __/client/caclient.s: __/client/caclient.cpp.s
@@ -152,6 +184,8 @@ __/client/caclient.s: __/client/caclient.cpp.s
 # target to generate assembly for a file
 __/client/caclient.cpp.s:
 	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver.dir/build.make src/slaveserver/CMakeFiles/slaveserver.dir/__/client/caclient.cpp.s
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/__/client/caclient.cpp.s
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/__/client/caclient.cpp.s
 .PHONY : __/client/caclient.cpp.s
 
 slaveServer.o: slaveServer.cpp.o
@@ -160,6 +194,8 @@ slaveServer.o: slaveServer.cpp.o
 # target to build an object file
 slaveServer.cpp.o:
 	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver.dir/build.make src/slaveserver/CMakeFiles/slaveserver.dir/slaveServer.cpp.o
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/slaveServer.cpp.o
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/slaveServer.cpp.o
 .PHONY : slaveServer.cpp.o
 
 slaveServer.i: slaveServer.cpp.i
@@ -168,6 +204,8 @@ slaveServer.i: slaveServer.cpp.i
 # target to preprocess a source file
 slaveServer.cpp.i:
 	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver.dir/build.make src/slaveserver/CMakeFiles/slaveserver.dir/slaveServer.cpp.i
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/slaveServer.cpp.i
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/slaveServer.cpp.i
 .PHONY : slaveServer.cpp.i
 
 slaveServer.s: slaveServer.cpp.s
@@ -176,6 +214,8 @@ slaveServer.s: slaveServer.cpp.s
 # target to generate assembly for a file
 slaveServer.cpp.s:
 	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver.dir/build.make src/slaveserver/CMakeFiles/slaveserver.dir/slaveServer.cpp.s
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/slaveServer.cpp.s
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/slaveServer.cpp.s
 .PHONY : slaveServer.cpp.s
 
 slaveService.o: slaveService.cpp.o
@@ -184,6 +224,8 @@ slaveService.o: slaveService.cpp.o
 # target to build an object file
 slaveService.cpp.o:
 	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver.dir/build.make src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.o
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/slaveService.cpp.o
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/slaveService.cpp.o
 .PHONY : slaveService.cpp.o
 
 slaveService.i: slaveService.cpp.i
@@ -192,6 +234,8 @@ slaveService.i: slaveService.cpp.i
 # target to preprocess a source file
 slaveService.cpp.i:
 	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver.dir/build.make src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.i
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/slaveService.cpp.i
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/slaveService.cpp.i
 .PHONY : slaveService.cpp.i
 
 slaveService.s: slaveService.cpp.s
@@ -200,6 +244,8 @@ slaveService.s: slaveService.cpp.s
 # target to generate assembly for a file
 slaveService.cpp.s:
 	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver.dir/build.make src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.s
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/slaveService.cpp.s
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/slaveService.cpp.s
 .PHONY : slaveService.cpp.s
 
 test_slave_server.o: test_slave_server.cc.o
@@ -226,6 +272,54 @@ test_slave_server.cc.s:
 	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver.dir/build.make src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.s
 .PHONY : test_slave_server.cc.s
 
+test_slave_server1.o: test_slave_server1.cc.o
+.PHONY : test_slave_server1.o
+
+# target to build an object file
+test_slave_server1.cc.o:
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/test_slave_server1.cc.o
+.PHONY : test_slave_server1.cc.o
+
+test_slave_server1.i: test_slave_server1.cc.i
+.PHONY : test_slave_server1.i
+
+# target to preprocess a source file
+test_slave_server1.cc.i:
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/test_slave_server1.cc.i
+.PHONY : test_slave_server1.cc.i
+
+test_slave_server1.s: test_slave_server1.cc.s
+.PHONY : test_slave_server1.s
+
+# target to generate assembly for a file
+test_slave_server1.cc.s:
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/test_slave_server1.cc.s
+.PHONY : test_slave_server1.cc.s
+
+test_slave_server2.o: test_slave_server2.cc.o
+.PHONY : test_slave_server2.o
+
+# target to build an object file
+test_slave_server2.cc.o:
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/test_slave_server2.cc.o
+.PHONY : test_slave_server2.cc.o
+
+test_slave_server2.i: test_slave_server2.cc.i
+.PHONY : test_slave_server2.i
+
+# target to preprocess a source file
+test_slave_server2.cc.i:
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/test_slave_server2.cc.i
+.PHONY : test_slave_server2.cc.i
+
+test_slave_server2.s: test_slave_server2.cc.s
+.PHONY : test_slave_server2.s
+
+# target to generate assembly for a file
+test_slave_server2.cc.s:
+	cd /storage4/lxj/Cplus/MudCash/build && $(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/test_slave_server2.cc.s
+.PHONY : test_slave_server2.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -235,6 +329,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... slaveserver"
+	@echo "... slaveserver1"
+	@echo "... slaveserver2"
 	@echo "... __/client/caclient.o"
 	@echo "... __/client/caclient.i"
 	@echo "... __/client/caclient.s"
@@ -247,6 +343,12 @@ help:
 	@echo "... test_slave_server.o"
 	@echo "... test_slave_server.i"
 	@echo "... test_slave_server.s"
+	@echo "... test_slave_server1.o"
+	@echo "... test_slave_server1.i"
+	@echo "... test_slave_server1.s"
+	@echo "... test_slave_server2.o"
+	@echo "... test_slave_server2.i"
+	@echo "... test_slave_server2.s"
 .PHONY : help
 
 

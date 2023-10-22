@@ -130,6 +130,8 @@ src/coserver/clean: src/coserver/CMakeFiles/coserver.dir/clean
 
 # Recursive "all" directory target.
 src/slaveserver/all: src/slaveserver/CMakeFiles/slaveserver.dir/all
+src/slaveserver/all: src/slaveserver/CMakeFiles/slaveserver1.dir/all
+src/slaveserver/all: src/slaveserver/CMakeFiles/slaveserver2.dir/all
 .PHONY : src/slaveserver/all
 
 # Recursive "preinstall" directory target.
@@ -138,6 +140,8 @@ src/slaveserver/preinstall:
 
 # Recursive "clean" directory target.
 src/slaveserver/clean: src/slaveserver/CMakeFiles/slaveserver.dir/clean
+src/slaveserver/clean: src/slaveserver/CMakeFiles/slaveserver1.dir/clean
+src/slaveserver/clean: src/slaveserver/CMakeFiles/slaveserver2.dir/clean
 .PHONY : src/slaveserver/clean
 
 #=============================================================================
@@ -217,6 +221,58 @@ slaveserver: src/slaveserver/CMakeFiles/slaveserver.dir/rule
 src/slaveserver/CMakeFiles/slaveserver.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver.dir/build.make src/slaveserver/CMakeFiles/slaveserver.dir/clean
 .PHONY : src/slaveserver/CMakeFiles/slaveserver.dir/clean
+
+#=============================================================================
+# Target rules for target src/slaveserver/CMakeFiles/slaveserver1.dir
+
+# All Build rule for target.
+src/slaveserver/CMakeFiles/slaveserver1.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/storage4/lxj/Cplus/MudCash/build/CMakeFiles --progress-num=15,16,17,18,19 "Built target slaveserver1"
+.PHONY : src/slaveserver/CMakeFiles/slaveserver1.dir/all
+
+# Build rule for subdir invocation for target.
+src/slaveserver/CMakeFiles/slaveserver1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /storage4/lxj/Cplus/MudCash/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/slaveserver/CMakeFiles/slaveserver1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /storage4/lxj/Cplus/MudCash/build/CMakeFiles 0
+.PHONY : src/slaveserver/CMakeFiles/slaveserver1.dir/rule
+
+# Convenience name for target.
+slaveserver1: src/slaveserver/CMakeFiles/slaveserver1.dir/rule
+.PHONY : slaveserver1
+
+# clean rule for target.
+src/slaveserver/CMakeFiles/slaveserver1.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/clean
+.PHONY : src/slaveserver/CMakeFiles/slaveserver1.dir/clean
+
+#=============================================================================
+# Target rules for target src/slaveserver/CMakeFiles/slaveserver2.dir
+
+# All Build rule for target.
+src/slaveserver/CMakeFiles/slaveserver2.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/storage4/lxj/Cplus/MudCash/build/CMakeFiles --progress-num=20,21,22,23,24 "Built target slaveserver2"
+.PHONY : src/slaveserver/CMakeFiles/slaveserver2.dir/all
+
+# Build rule for subdir invocation for target.
+src/slaveserver/CMakeFiles/slaveserver2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /storage4/lxj/Cplus/MudCash/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/slaveserver/CMakeFiles/slaveserver2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /storage4/lxj/Cplus/MudCash/build/CMakeFiles 0
+.PHONY : src/slaveserver/CMakeFiles/slaveserver2.dir/rule
+
+# Convenience name for target.
+slaveserver2: src/slaveserver/CMakeFiles/slaveserver2.dir/rule
+.PHONY : slaveserver2
+
+# clean rule for target.
+src/slaveserver/CMakeFiles/slaveserver2.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/clean
+.PHONY : src/slaveserver/CMakeFiles/slaveserver2.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

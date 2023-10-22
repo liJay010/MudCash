@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <memory>
 #include <vector>
+#include <utility>
 #define STORE_FILE "store/dumpFile"
 
 static std::mutex mtx;     // mutex for critical section
@@ -29,6 +30,9 @@ public:
 
     V get_value() const;
 
+    void set_backup(bool);
+    bool get_backup();
+
     void set_value(V);
 
     // Linear array to hold pointers to next node of different level
@@ -38,6 +42,7 @@ public:
     int node_level;
 
 private:
+    bool backup; //该节点是否是备份数据 - 默认不是
     K key;
     V value;
 };
@@ -47,7 +52,7 @@ Node<K, V>::Node(const K k, const V v, int level) {
     this->key = k;
     this->value = v;
     this->node_level = level;
-
+    backup = false;
     // level + 1, because array index is from 0 - level
     //this->forward = new Node<K, V>*[level+1];
     this->forward.resize(level+1);
@@ -74,7 +79,17 @@ template<typename K, typename V>
 void Node<K, V>::set_value(V value) {
     this->value=value;
 };
+template<typename K, typename V>
+void Node<K, V>::set_backup(bool bk)
+{
+    this->backup=bk;
+};
 
+template<typename K, typename V>
+bool Node<K, V>::get_backup()
+{
+    return this->backup;
+}
 // Class template for Skip list
 template <typename K, typename V>
 class SkipList {
@@ -84,9 +99,16 @@ public:
     ~SkipList();
     int get_random_level();
     std::shared_ptr<Node<K, V>> create_node(K, V, int);
-    int insert_element(K, V);
+    int insert_element(K, V,bool backup = false);
     void display_list();
-    V search_element(K);
+
+    std::vector<std::pair<K,V>> all_list(); //返回所有键值对
+    //TODO
+    //找到哈希环的上一个节点，下一个节点
+    
+    V search_element(K); //找K，找到返回，找不到返回下一个
+    bool find_element(K,V*);//找K，找到返回0，V保存参数，找不到返回-1，
+
     void delete_element(K);
     void dump_file();
     void load_file();
@@ -146,7 +168,7 @@ level 0         1    4   9 10         30   40  | 50 |  60      70       100
 
 */
 template<typename K, typename V>
-int SkipList<K, V>::insert_element(const K key, const V value) {
+int SkipList<K, V>::insert_element(K key, V value,bool backup) {
 
     mtx.lock();
     std::shared_ptr<Node<K, V>> current = this->_header;
@@ -171,6 +193,8 @@ int SkipList<K, V>::insert_element(const K key, const V value) {
 
     // if current node have key equal to searched key, we get it
     if (current != nullptr && current->get_key() == key) {
+        current->set_value(value);
+        current->set_backup(backup);
         mtx.unlock();
         return 1;
     }
@@ -192,7 +216,7 @@ int SkipList<K, V>::insert_element(const K key, const V value) {
 
         // create new node with random level generated
         std::shared_ptr<Node<K, V>> inserted_node = create_node(key, value, random_level);
-
+        inserted_node->set_backup(backup);
         // insert node
         for (int i = 0; i <= random_level; i++) {
             inserted_node->forward[i] = update[i]->forward[i];
@@ -218,6 +242,20 @@ void SkipList<K, V>::display_list() {
         }
         std::cout << std::endl;
     }
+}
+template<typename K, typename V>
+std::vector<std::pair<K,V>> SkipList<K, V>::all_list() //返回所有键值对
+{
+    std::vector<std::pair<K,V>> res;
+
+    std::shared_ptr<Node<K, V>>node = this->_header->forward[0];
+
+    while (node != nullptr) {
+        std::cout << node->get_key() << ":" << node->get_value() << ";";
+        res.push_back({node->get_key(),node->get_value()});
+        node = node->forward[0];
+    }
+    return res;
 }
 
 // Dump data in memory to file
@@ -253,7 +291,7 @@ void SkipList<K, V>::load_file() {
         if (key.empty() || value.empty()) {
             continue;
         }
-        insert_element(key, value);
+        insert_element(key, value,false);
         std::cout << "key:" << key << "value:" << value << std::endl;
     }
     _file_reader.close();
@@ -378,6 +416,34 @@ V SkipList<K, V>::search_element(K key) {
     return this->_header->forward[0]->get_value();
 }
 
+template<typename K, typename V>
+bool SkipList<K, V>::find_element(K key,V *value)
+{
+    std::shared_ptr<Node<K, V>>current = _header;
+
+    // start from highest level of skip list
+    for (int i = _skip_list_level; i >= 0; i--) {
+        while (current->forward[i] && current->forward[i]->get_key() < key) {
+            current = current->forward[i];
+        }
+    }
+
+    //reached level 0 and advance pointer to right node, which we search
+    current = current->forward[0];
+
+    // if current node have key equal to searched key, we get it
+    if (current and current->get_key() == key) {
+        *value = current->get_value();
+        return 0;
+    }
+
+    if(current) 
+    {
+        *value = current->get_value();
+        return 0;
+    }
+    return -1;
+}
 
 // construct skip list
 template<typename K, typename V>

@@ -155,6 +155,32 @@ slaveserver/fast:
 	$(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver.dir/build.make src/slaveserver/CMakeFiles/slaveserver.dir/build
 .PHONY : slaveserver/fast
 
+#=============================================================================
+# Target rules for targets named slaveserver1
+
+# Build rule for target.
+slaveserver1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 slaveserver1
+.PHONY : slaveserver1
+
+# fast build rule for target.
+slaveserver1/fast:
+	$(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver1.dir/build.make src/slaveserver/CMakeFiles/slaveserver1.dir/build
+.PHONY : slaveserver1/fast
+
+#=============================================================================
+# Target rules for targets named slaveserver2
+
+# Build rule for target.
+slaveserver2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 slaveserver2
+.PHONY : slaveserver2
+
+# fast build rule for target.
+slaveserver2/fast:
+	$(MAKE) $(MAKESILENT) -f src/slaveserver/CMakeFiles/slaveserver2.dir/build.make src/slaveserver/CMakeFiles/slaveserver2.dir/build
+.PHONY : slaveserver2/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -166,6 +192,8 @@ help:
 	@echo "... caclient"
 	@echo "... coserver"
 	@echo "... slaveserver"
+	@echo "... slaveserver1"
+	@echo "... slaveserver2"
 .PHONY : help
 
 

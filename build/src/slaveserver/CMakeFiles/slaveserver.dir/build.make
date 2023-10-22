@@ -97,24 +97,10 @@ src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slaveserver.dir/slaveService.cpp.s"
 	cd /storage4/lxj/Cplus/MudCash/build/src/slaveserver && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage4/lxj/Cplus/MudCash/src/slaveserver/slaveService.cpp -o CMakeFiles/slaveserver.dir/slaveService.cpp.s
 
-src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: src/slaveserver/CMakeFiles/slaveserver.dir/flags.make
-src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: /storage4/lxj/Cplus/MudCash/src/slaveserver/test_slave_server.cc
-src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: src/slaveserver/CMakeFiles/slaveserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage4/lxj/Cplus/MudCash/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o"
-	cd /storage4/lxj/Cplus/MudCash/build/src/slaveserver && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o -MF CMakeFiles/slaveserver.dir/test_slave_server.cc.o.d -o CMakeFiles/slaveserver.dir/test_slave_server.cc.o -c /storage4/lxj/Cplus/MudCash/src/slaveserver/test_slave_server.cc
-
-src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slaveserver.dir/test_slave_server.cc.i"
-	cd /storage4/lxj/Cplus/MudCash/build/src/slaveserver && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage4/lxj/Cplus/MudCash/src/slaveserver/test_slave_server.cc > CMakeFiles/slaveserver.dir/test_slave_server.cc.i
-
-src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slaveserver.dir/test_slave_server.cc.s"
-	cd /storage4/lxj/Cplus/MudCash/build/src/slaveserver && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage4/lxj/Cplus/MudCash/src/slaveserver/test_slave_server.cc -o CMakeFiles/slaveserver.dir/test_slave_server.cc.s
-
 src/slaveserver/CMakeFiles/slaveserver.dir/__/client/caclient.cpp.o: src/slaveserver/CMakeFiles/slaveserver.dir/flags.make
 src/slaveserver/CMakeFiles/slaveserver.dir/__/client/caclient.cpp.o: /storage4/lxj/Cplus/MudCash/src/client/caclient.cpp
 src/slaveserver/CMakeFiles/slaveserver.dir/__/client/caclient.cpp.o: src/slaveserver/CMakeFiles/slaveserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage4/lxj/Cplus/MudCash/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/slaveserver/CMakeFiles/slaveserver.dir/__/client/caclient.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage4/lxj/Cplus/MudCash/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/slaveserver/CMakeFiles/slaveserver.dir/__/client/caclient.cpp.o"
 	cd /storage4/lxj/Cplus/MudCash/build/src/slaveserver && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/slaveserver/CMakeFiles/slaveserver.dir/__/client/caclient.cpp.o -MF CMakeFiles/slaveserver.dir/__/client/caclient.cpp.o.d -o CMakeFiles/slaveserver.dir/__/client/caclient.cpp.o -c /storage4/lxj/Cplus/MudCash/src/client/caclient.cpp
 
 src/slaveserver/CMakeFiles/slaveserver.dir/__/client/caclient.cpp.i: cmake_force
@@ -125,20 +111,34 @@ src/slaveserver/CMakeFiles/slaveserver.dir/__/client/caclient.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slaveserver.dir/__/client/caclient.cpp.s"
 	cd /storage4/lxj/Cplus/MudCash/build/src/slaveserver && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage4/lxj/Cplus/MudCash/src/client/caclient.cpp -o CMakeFiles/slaveserver.dir/__/client/caclient.cpp.s
 
+src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: src/slaveserver/CMakeFiles/slaveserver.dir/flags.make
+src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: /storage4/lxj/Cplus/MudCash/src/slaveserver/test_slave_server.cc
+src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: src/slaveserver/CMakeFiles/slaveserver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage4/lxj/Cplus/MudCash/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o"
+	cd /storage4/lxj/Cplus/MudCash/build/src/slaveserver && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o -MF CMakeFiles/slaveserver.dir/test_slave_server.cc.o.d -o CMakeFiles/slaveserver.dir/test_slave_server.cc.o -c /storage4/lxj/Cplus/MudCash/src/slaveserver/test_slave_server.cc
+
+src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slaveserver.dir/test_slave_server.cc.i"
+	cd /storage4/lxj/Cplus/MudCash/build/src/slaveserver && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage4/lxj/Cplus/MudCash/src/slaveserver/test_slave_server.cc > CMakeFiles/slaveserver.dir/test_slave_server.cc.i
+
+src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slaveserver.dir/test_slave_server.cc.s"
+	cd /storage4/lxj/Cplus/MudCash/build/src/slaveserver && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage4/lxj/Cplus/MudCash/src/slaveserver/test_slave_server.cc -o CMakeFiles/slaveserver.dir/test_slave_server.cc.s
+
 # Object files for target slaveserver
 slaveserver_OBJECTS = \
 "CMakeFiles/slaveserver.dir/slaveServer.cpp.o" \
 "CMakeFiles/slaveserver.dir/slaveService.cpp.o" \
-"CMakeFiles/slaveserver.dir/test_slave_server.cc.o" \
-"CMakeFiles/slaveserver.dir/__/client/caclient.cpp.o"
+"CMakeFiles/slaveserver.dir/__/client/caclient.cpp.o" \
+"CMakeFiles/slaveserver.dir/test_slave_server.cc.o"
 
 # External object files for target slaveserver
 slaveserver_EXTERNAL_OBJECTS =
 
 /storage4/lxj/Cplus/MudCash/bin/slaveserver: src/slaveserver/CMakeFiles/slaveserver.dir/slaveServer.cpp.o
 /storage4/lxj/Cplus/MudCash/bin/slaveserver: src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.o
-/storage4/lxj/Cplus/MudCash/bin/slaveserver: src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o
 /storage4/lxj/Cplus/MudCash/bin/slaveserver: src/slaveserver/CMakeFiles/slaveserver.dir/__/client/caclient.cpp.o
+/storage4/lxj/Cplus/MudCash/bin/slaveserver: src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o
 /storage4/lxj/Cplus/MudCash/bin/slaveserver: src/slaveserver/CMakeFiles/slaveserver.dir/build.make
 /storage4/lxj/Cplus/MudCash/bin/slaveserver: src/slaveserver/CMakeFiles/slaveserver.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/storage4/lxj/Cplus/MudCash/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable /storage4/lxj/Cplus/MudCash/bin/slaveserver"

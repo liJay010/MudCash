@@ -64,7 +64,7 @@ void SlaveServer::onMessage(const TcpConnectionPtr &conn,
             Timestamp time)
 {
     std::string buf = buffer->retrieveAllAsString();
-
+    //std::cout << node_name  << "MSG COMING"<< std::endl;
     // 测试，添加json打印代码
     //std::cout << buf << std::endl;
 

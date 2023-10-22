@@ -29,14 +29,6 @@ void coordination_Service::client_put(const TcpConnectionPtr &conn, json &js, Ti
     shared_ptr<caclient> cli= _fdMap[node];
     string sendBuf = js.dump();
     cli->ca_send_message(sendBuf);
-    //string value = js["value"].get<string>();
-    //TODO 
-    
-    //json res;
-    
-    //res["type"] = CLIENT_PUT_ACK; //发送连接数据
-    //res["code"] = 0;
-    //string sendBuf = res.dump();
     conn->send(cli->ca_receive_message());
 }
 void coordination_Service::client_get(const TcpConnectionPtr &conn, json &js, Timestamp time)
@@ -51,13 +43,11 @@ void coordination_Service::client_get(const TcpConnectionPtr &conn, json &js, Ti
 void coordination_Service::client_delete(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
     string key = js["key"].get<string>();
-    //TODO 
-
-    json res;
-    res["type"] = CLIENT_DELETE_ACK; //发送连接数据
-    res["code"] = 0;
-    string sendBuf = res.dump();
-    conn->send(sendBuf);
+    string node = hashring.search_by_name(key);
+    shared_ptr<caclient> cli = _fdMap[node];
+    string sendBuf = js.dump();
+    cli->ca_send_message(sendBuf);
+    conn->send(cli->ca_receive_message());
 }
 void coordination_Service::client_update(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
@@ -65,11 +55,11 @@ void coordination_Service::client_update(const TcpConnectionPtr &conn, json &js,
     string value = js["value"].get<string>();
     //TODO 
     
-    json res;
-    res["type"] = CLIENT_UPDATE_ACK; //发送连接数据
-    res["code"] = 0;
-    string sendBuf = res.dump();
-    conn->send(sendBuf);
+    string node = hashring.search_by_name(key);
+    shared_ptr<caclient> cli= _fdMap[node];
+    string sendBuf = js.dump();
+    cli->ca_send_message(sendBuf);
+    conn->send(cli->ca_receive_message());
 }
 
 void coordination_Service::slave_ACK(const TcpConnectionPtr &conn, json &js, Timestamp time)

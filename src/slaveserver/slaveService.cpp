@@ -33,11 +33,17 @@ void slaveService::Slave_GET(const TcpConnectionPtr &conn, json &js, Timestamp t
 {
     string key = js["key"].get<string>();
     //TODO 
-    string r = skiplist.search_element(key);
+    string value;
+    int f = skiplist.find_element(key,&value);
     json res;
     res["type"] = SLAVE_SEVER_GET_ACK; //发送连接数据
-    res["value"] = r;
-    res["code"] = 0;
+    if(f == 0)
+    {
+        res["value"] = value;
+        res["code"] = 0;
+    }
+    else res["code"] = -1;
+    
     string sendBuf = res.dump();
     conn->send(sendBuf);
 }
@@ -55,11 +61,26 @@ void slaveService::Slave_PUT(const TcpConnectionPtr &conn, json &js, Timestamp t
 }
 void slaveService::Slave_UPDATE(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
-    
+    string key = js["key"].get<string>();
+    string value = js["value"].get<string>();
+    //TODO 
+    skiplist.insert_element(key,value);
+    json res;
+    res["type"] = SLAVE_SEVER_UPDATE_ACK; //发送连接数据
+    res["code"] = 0;
+    string sendBuf = res.dump();
+    conn->send(sendBuf);
 }
 void slaveService::Slave_DELETE(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
-
+    string key = js["key"].get<string>();
+    //TODO 
+    skiplist.delete_element(key);
+    json res;
+    res["type"] = SLAVE_SEVER_DELETE_ACK; //发送连接数据
+    res["code"] = 0;
+    string sendBuf = res.dump();
+    conn->send(sendBuf);
 }
 
 slaveService::slaveService():skiplist(10)
