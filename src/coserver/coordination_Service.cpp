@@ -127,9 +127,9 @@ void coordination_Service::client_get(const TcpConnectionPtr &conn, json &js, Ti
         root = deletehash_Node(root, next->key);
         _fdMap.erase(cli->ip_port_self);
         //需要告知其下下一个节点的ip以及端口，讲数据发送，然后删除backup中数据
-        /*if(next_next)
+        if(next_next)
         {
-            cout << next->ip_plus_port << "掉线 -> 备份到下一个节点 ："<< next_next->ip_plus_port << endl;
+            
             //向下下一个节点备份数据
             hash_Node* sub_next= nullptr;
             Suc(root, pre,sub_next, CRC32(next_next->ip_plus_port));
@@ -138,6 +138,7 @@ void coordination_Service::client_get(const TcpConnectionPtr &conn, json &js, Ti
             if(pre == nullptr) pre = maxValue(root);
             if(sub_next == next_next)//说明就只有一个节点了
             {
+                cout << "just one node" <<endl;
                 shared_ptr<caclient> cli_next= _fdMap[next_next->ip_plus_port];
                 json jsp;
                 jsp["type"] = BACKUP_CO; //发送连接数据
@@ -149,26 +150,36 @@ void coordination_Service::client_get(const TcpConnectionPtr &conn, json &js, Ti
             {
                 json jsp;
                 shared_ptr<caclient> cli_next= _fdMap[next_next->ip_plus_port];
-                if(_fdMap.find(sub_next->ip_plus_port) == _fdMap.end())
+                if(_fdMap.find(pre->ip_plus_port) == _fdMap.end())
                 {
                     cout << "sub_next -> cli null" <<endl;
                     exit(0);
                 }
                 shared_ptr<caclient> pre_cli_next= _fdMap[pre->ip_plus_port];
+                if(_fdMap.find(sub_next->ip_plus_port) == _fdMap.end())
+                {
+                    cout << "sub_next -> cli null" <<endl;
+                    exit(0);
+                }
                 shared_ptr<caclient> sub_cli_next= _fdMap[sub_next->ip_plus_port];
                 jsp["type"] = BACKUP_CO; //发送连接数据
                 jsp["only_one"] = false; 
-                jsp["ip_self"] = cli->ip_self;
-                jsp["port_self"] = cli->port_self;
+                jsp["ip_self"] = cli_next->ip_self;
+                jsp["port_self"] = cli_next->port_self;
                 jsp["ip"] = sub_cli_next->ip_self;
                 jsp["port"] = sub_cli_next->port_self;
                 jsp["pre_ip"] = pre_cli_next->ip_self;
                 jsp["pre_port"] = pre_cli_next->port_self;
+
+                cout << cli->ip_port_self << "掉线 -> 备份到下一个节点 ："<< next_next->ip_plus_port << endl;
+                cout << "pre ip : "<< pre_cli_next->ip_self << " port :" << pre_cli_next->port_self << endl;
+                cout << "cur ip : "<< cli_next->ip_self << " port :" << cli_next->port_self << endl;
+                cout << "next ip : "<< sub_cli_next->ip_self << " port :" << sub_cli_next->port_self << endl;
                 string sendBufp = jsp.dump();
                 cli_next->ca_send_message(sendBufp);
             }
             
-        }*/
+        }
     }
 
     if(next_next == next || next_next == nullptr)
