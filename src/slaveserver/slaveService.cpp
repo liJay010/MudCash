@@ -103,6 +103,7 @@ void slaveService::Slave_BACKUP(const TcpConnectionPtr &conn, json &js, Timestam
         {
             self_data.insert_KV(x.first,x.second);
         }
+        backup.clear();
         return;
     }
     string ip = js["ip"].get<string>(); //下一个节点
