@@ -1,6 +1,7 @@
 #include "avl.hpp"
 #include <iostream>
 #include <string>
+#include "KVdatabase.h"
 using namespace std;
 /*
 avl_tree 类：
@@ -13,6 +14,7 @@ inorder(hash_Node *root)
 */
 int main()
 {
+    KVdatabase<string,string> db;
     hash_Node *root=NULL;
     string s("112");
     root = insert(root, CRC32(s), s);

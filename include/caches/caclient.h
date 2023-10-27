@@ -24,5 +24,7 @@ public:
     std::string ip;//服务器端ip
     int port;//服务器端端口
     std::string ip_port_self;//服务器端ip
+    std::string ip_self;
+    int port_self;
 };
 

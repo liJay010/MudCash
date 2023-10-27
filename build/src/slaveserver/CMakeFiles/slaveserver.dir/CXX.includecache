@@ -6,22 +6,10 @@
 
 #IncludeRegexTransform: 
 
-../include/caches/SkipList.h
-iostream
+../include/caches/KVdatabase.h
+unordered_map
 -
-cstdlib
--
-cmath
--
-cstring
--
-mutex
--
-fstream
--
-cstdlib
--
-memory
+string
 -
 vector
 -
@@ -389,8 +377,8 @@ json.hpp
 ../include/caches/json.hpp
 vector
 -
-SkipList.h
-../include/caches/SkipList.h
+KVdatabase.h
+../include/caches/KVdatabase.h
 
 ../include/net/Acceptor.h
 noncopyable.h

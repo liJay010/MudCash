@@ -32,7 +32,10 @@ enum EnMsgType
 
     //请求失败
     MESSAGE_FALL,
-    
+    BACKUP_CO,
+    BACKUP_RECV,
+    BACKUP_RECV_ACK,
+    BACKUP_PRE,
 };
 
 

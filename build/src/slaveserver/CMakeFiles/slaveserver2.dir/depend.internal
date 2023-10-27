@@ -7,7 +7,7 @@ src/slaveserver/CMakeFiles/slaveserver2.dir/__/client/caclient.cpp.o
  ../include/caches/json.hpp
  /storage4/lxj/Cplus/MudCash/src/client/caclient.cpp
 src/slaveserver/CMakeFiles/slaveserver2.dir/slaveServer.cpp.o
- ../include/caches/SkipList.h
+ ../include/caches/KVdatabase.h
  ../include/caches/caclient.h
  ../include/caches/global.h
  ../include/caches/json.hpp
@@ -30,7 +30,7 @@ src/slaveserver/CMakeFiles/slaveserver2.dir/slaveServer.cpp.o
  ../include/net/noncopyable.h
  /storage4/lxj/Cplus/MudCash/src/slaveserver/slaveServer.cpp
 src/slaveserver/CMakeFiles/slaveserver2.dir/slaveService.cpp.o
- ../include/caches/SkipList.h
+ ../include/caches/KVdatabase.h
  ../include/caches/caclient.h
  ../include/caches/global.h
  ../include/caches/json.hpp

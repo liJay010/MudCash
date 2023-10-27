@@ -6,7 +6,7 @@ src/slaveserver/CMakeFiles/slaveserver2.dir/__/client/caclient.cpp.o: ../include
 src/slaveserver/CMakeFiles/slaveserver2.dir/__/client/caclient.cpp.o: ../include/caches/json.hpp
 src/slaveserver/CMakeFiles/slaveserver2.dir/__/client/caclient.cpp.o: ../src/client/caclient.cpp
 
-src/slaveserver/CMakeFiles/slaveserver2.dir/slaveServer.cpp.o: ../include/caches/SkipList.h
+src/slaveserver/CMakeFiles/slaveserver2.dir/slaveServer.cpp.o: ../include/caches/KVdatabase.h
 src/slaveserver/CMakeFiles/slaveserver2.dir/slaveServer.cpp.o: ../include/caches/caclient.h
 src/slaveserver/CMakeFiles/slaveserver2.dir/slaveServer.cpp.o: ../include/caches/global.h
 src/slaveserver/CMakeFiles/slaveserver2.dir/slaveServer.cpp.o: ../include/caches/json.hpp
@@ -29,7 +29,7 @@ src/slaveserver/CMakeFiles/slaveserver2.dir/slaveServer.cpp.o: ../include/net/Ti
 src/slaveserver/CMakeFiles/slaveserver2.dir/slaveServer.cpp.o: ../include/net/noncopyable.h
 src/slaveserver/CMakeFiles/slaveserver2.dir/slaveServer.cpp.o: ../src/slaveserver/slaveServer.cpp
 
-src/slaveserver/CMakeFiles/slaveserver2.dir/slaveService.cpp.o: ../include/caches/SkipList.h
+src/slaveserver/CMakeFiles/slaveserver2.dir/slaveService.cpp.o: ../include/caches/KVdatabase.h
 src/slaveserver/CMakeFiles/slaveserver2.dir/slaveService.cpp.o: ../include/caches/caclient.h
 src/slaveserver/CMakeFiles/slaveserver2.dir/slaveService.cpp.o: ../include/caches/global.h
 src/slaveserver/CMakeFiles/slaveserver2.dir/slaveService.cpp.o: ../include/caches/json.hpp

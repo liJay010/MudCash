@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+../include/caches/KVdatabase.h
+unordered_map
+-
+string
+-
+vector
+-
+utility
+-
+
 ../include/caches/avl.hpp
 string
 -
@@ -19,4 +29,6 @@ iostream
 -
 string
 -
+KVdatabase.h
+/storage4/lxj/Cplus/MudCash/src/hash/KVdatabase.h
 

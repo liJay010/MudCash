@@ -9,7 +9,7 @@
 using namespace std;
 #include "json.hpp"
 #include <vector>
-#include "SkipList.h"
+#include "KVdatabase.h"
 using json = nlohmann::json;
 
 // 表示处理消息的事件回调方法类型
@@ -26,6 +26,9 @@ public:
     void Slave_PUT(const TcpConnectionPtr &conn, json &js, Timestamp time);
     void Slave_UPDATE(const TcpConnectionPtr &conn, json &js, Timestamp time);
     void Slave_DELETE(const TcpConnectionPtr &conn, json &js, Timestamp time);
+    void Slave_BACKUP(const TcpConnectionPtr &conn, json &js, Timestamp time);
+    void Slave_BACKUP_RECV(const TcpConnectionPtr &conn, json &js, Timestamp time);
+    void Slave_BACKUP_PRE(const TcpConnectionPtr &conn, json &js, Timestamp time);
     // 处理客户端异常退出
     void clientCloseException(const TcpConnectionPtr &conn){};
     // 服务器异常，业务重置方法
@@ -37,6 +40,6 @@ private:
     slaveService();
     mutex _connMutex;
     unordered_map<int, MsgHandler> _msgHandlerMap;
-    SkipList<string,string> skiplist;
-    vector<string> backup;
+    KVdatabase<string,string> backup;
+    KVdatabase<string,string> self_data;
 };
