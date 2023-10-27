@@ -1,4 +1,2 @@
-# 定义参与编译的源代码文件 
-#aux_source_directory(. SRC_LIST)
-# 编译生成动态库mymuduo
-#add_library(caches SHARED ${SRC_LIST})
+
+add_executable(avl main.cpp)

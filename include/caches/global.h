@@ -29,8 +29,14 @@ enum EnMsgType
     SLAVE_SEVER_PUT_ACK,
     SLAVE_SEVER_UPDATE_ACK,
     SLAVE_SEVER_DELETE_ACK,
+
+    //请求失败
+    MESSAGE_FALL,
     
 };
+
+
+
 
 
 

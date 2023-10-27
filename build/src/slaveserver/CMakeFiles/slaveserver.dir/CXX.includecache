@@ -6,6 +6,28 @@
 
 #IncludeRegexTransform: 
 
+../include/caches/SkipList.h
+iostream
+-
+cstdlib
+-
+cmath
+-
+cstring
+-
+mutex
+-
+fstream
+-
+cstdlib
+-
+memory
+-
+vector
+-
+utility
+-
+
 ../include/caches/caclient.h
 string
 -
@@ -365,6 +387,10 @@ mutex
 -
 json.hpp
 ../include/caches/json.hpp
+vector
+-
+SkipList.h
+../include/caches/SkipList.h
 
 ../include/net/Acceptor.h
 noncopyable.h

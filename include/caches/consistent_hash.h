@@ -14,7 +14,9 @@ public:
     std::unique_ptr<SkipList<unsigned int, std::string>> consistent_hash_list;  // 哈希环
     consistent_hash();
     ~consistent_hash();
+    std::string search_pre_name(std::string name);
     std::string search_by_name(std::string name);
+    std::string search_next_name(std::string name);
     //添加真实节点 -- 第二个参数为虚拟节点个数
     void add_real_node(std::string ip, unsigned int virtual_node_num);
     //删除真实节点

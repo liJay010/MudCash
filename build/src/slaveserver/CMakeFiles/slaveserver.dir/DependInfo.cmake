@@ -1,21 +1,24 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/storage4/lxj/Cplus/MudCash/src/client/caclient.cpp" "/storage4/lxj/Cplus/MudCash/build/src/slaveserver/CMakeFiles/slaveserver.dir/__/client/caclient.cpp.o"
+  "/storage4/lxj/Cplus/MudCash/src/slaveserver/slaveServer.cpp" "/storage4/lxj/Cplus/MudCash/build/src/slaveserver/CMakeFiles/slaveserver.dir/slaveServer.cpp.o"
+  "/storage4/lxj/Cplus/MudCash/src/slaveserver/slaveService.cpp" "/storage4/lxj/Cplus/MudCash/build/src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.o"
+  "/storage4/lxj/Cplus/MudCash/src/slaveserver/test_slave_server.cc" "/storage4/lxj/Cplus/MudCash/build/src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../include/net"
+  "../include/caches"
   )
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/storage4/lxj/Cplus/MudCash/src/client/caclient.cpp" "src/slaveserver/CMakeFiles/slaveserver.dir/__/client/caclient.cpp.o" "gcc" "src/slaveserver/CMakeFiles/slaveserver.dir/__/client/caclient.cpp.o.d"
-  "/storage4/lxj/Cplus/MudCash/src/slaveserver/slaveServer.cpp" "src/slaveserver/CMakeFiles/slaveserver.dir/slaveServer.cpp.o" "gcc" "src/slaveserver/CMakeFiles/slaveserver.dir/slaveServer.cpp.o.d"
-  "/storage4/lxj/Cplus/MudCash/src/slaveserver/slaveService.cpp" "src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.o" "gcc" "src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.o.d"
-  "/storage4/lxj/Cplus/MudCash/src/slaveserver/test_slave_server.cc" "src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o" "gcc" "src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o.d"
-  )
-
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

@@ -65,7 +65,7 @@ void EventLoop::loop()
     looping_ = true;
     quit_ = false;
 
-    LOG_INFO("EventLoop %p start looping \n", this);
+    //LOG_INFO("EventLoop %p start looping \n", this);
 
     while(!quit_)
     {
@@ -85,7 +85,7 @@ void EventLoop::loop()
         doPendingFunctors();
     }
 
-    LOG_INFO("EventLoop %p stop looping. \n", this);
+    //LOG_INFO("EventLoop %p stop looping. \n", this);
     looping_ = false;
 }
 

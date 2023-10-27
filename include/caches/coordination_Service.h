@@ -1,7 +1,6 @@
 #pragma once
 #include <string>
 #include "TcpServer.h"
-#include "Logger.h"
 #include <string>
 #include <functional>
 #include <unordered_map>
@@ -11,6 +10,7 @@ using namespace std;
 #include "json.hpp"
 #include "caclient.h"
 #include <memory>
+#include "avl.hpp"
 using json = nlohmann::json;
 
 // 表示处理消息的事件回调方法类型
@@ -41,7 +41,7 @@ private:
     coordination_Service();
     mutex _connMutex;
     unordered_map<int, MsgHandler> _msgHandlerMap;
-
     unordered_map<string,shared_ptr<caclient>> _fdMap;
-    consistent_hash hashring;
+    
+    hash_Node *root;
 };

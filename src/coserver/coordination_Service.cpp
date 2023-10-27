@@ -3,9 +3,18 @@
 #include "caclient.h"
 #include <memory>
 #include <iostream>
+#include "Logger.h"
 using namespace std;
 using namespace placeholders;
 
+string faild_ACK()
+{
+    //请求失败
+    json jsr;
+    jsr["type"] = SLAVE_SEVER_PUT_ACK; //发送连接数据
+    jsr["code"] = MESSAGE_FALL; //发送连接数据
+    return  jsr.dump();
+} 
 // 获取单例对象的接口函数
 coordination_Service *coordination_Service::instance()
 {
@@ -24,42 +33,130 @@ void coordination_Service::clientACK(const TcpConnectionPtr &conn, json &js, Tim
 }
 void coordination_Service::client_put(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
+    if(_fdMap.empty())
+    {
+        conn->send(faild_ACK());
+        return;
+    }
+
     string key = js["key"].get<string>();
-    string node = hashring.search_by_name(key);
-    shared_ptr<caclient> cli= _fdMap[node];
+
+    hash_Node* pre = nullptr;
+    hash_Node* next = nullptr;//使用这个
+    hash_Node* next_next= nullptr;
+    Suc(root, pre,next, CRC32(key));
+    if(next == nullptr) next = minValue(root);
+    if(next == nullptr)
+    {
+        cout << "can not find next -> "<<endl;
+        exit(1);
+    }
+    Suc(root, pre,next_next, next->key);
+    if(next_next == nullptr) next_next = minValue(root);
+    if(_fdMap.find(next->ip_plus_port) == _fdMap.end())
+    {
+        cout << "can not find node -> " +next->ip_plus_port<<endl;
+        exit(1);
+    }
+    //向next发送
+    js["back_up"] = false;
+    shared_ptr<caclient> cli= _fdMap[next->ip_plus_port];
+    
     string sendBuf = js.dump();
     cli->ca_send_message(sendBuf);
-    conn->send(cli->ca_receive_message());
+    RECV res = cli->ca_receive_message();
+    RECV res_cli;
+    if(next_next != next && next_next != nullptr)
+    {
+        js["back_up"] = true;
+        sendBuf = js.dump();
+        shared_ptr<caclient> cli_next= _fdMap[next_next->ip_plus_port];
+        cli_next->ca_send_message(sendBuf);
+        res_cli = cli_next->ca_receive_message();
+
+        if(res.cnt > 0 && res_cli.cnt > 0) conn->send(res.res);
+        else conn->send(faild_ACK());
+    }
+    else{
+        if(res.cnt > 0) conn->send(res.res);
+        else conn->send(faild_ACK());
+    }
 }
 void coordination_Service::client_get(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
+    if(_fdMap.empty())
+    {
+        conn->send(faild_ACK());
+        return;
+    }
     string key = js["key"].get<string>();
-    string node = hashring.search_by_name(key);
-    shared_ptr<caclient> cli = _fdMap[node];
+    hash_Node* pre = nullptr;
+    hash_Node* next = nullptr;//使用这个
+    hash_Node* next_next= nullptr;
+    Suc(root, pre,next, CRC32(key));
+    if(next == nullptr) next = minValue(root);
+
+    if(next == nullptr)
+    {
+        cout <<_fdMap.size() << " - size of fd can not find next -> null"<<endl;
+        exit(1);
+    }
+    Suc(root, pre,next_next, next->key);
+    if(_fdMap.find(next->ip_plus_port) == _fdMap.end())
+    {
+        cout << "can not find node -> " +next->ip_plus_port<<endl;
+        exit(1);
+    }
+
+    //向next发送
+    shared_ptr<caclient> cli= _fdMap[next->ip_plus_port];
     string sendBuf = js.dump();
     cli->ca_send_message(sendBuf);
-    conn->send(cli->ca_receive_message());
+    RECV res = cli->ca_receive_message();
+    
+
+    if(res.cnt > 0) 
+    {
+        conn->send(res.res);
+        return;
+    }
+    else//掉线了,需要备份，发送消息给下一个节点
+    {
+        //需要告知其下下一个节点的ip以及端口，讲数据发送，然后删除backup中数据
+
+        root = deletehash_Node(root, next->key);
+        _fdMap.erase(cli->ip_port_self);
+    }
+
+    if(next_next == next || next_next == nullptr)
+    {
+        conn->send(faild_ACK());
+        return;
+    }
+
+    shared_ptr<caclient> cli_next= _fdMap[next_next->ip_plus_port];
+    RECV res_cli;
+    cli_next->ca_send_message(sendBuf);
+
+    RECV res_next = cli_next->ca_receive_message();
+    if(res_next.cnt > 0) 
+    {
+        conn->send(res_next.res);
+        return;
+    }
+    else 
+    {
+        conn->send(faild_ACK());
+    }
+
 }
 void coordination_Service::client_delete(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
-    string key = js["key"].get<string>();
-    string node = hashring.search_by_name(key);
-    shared_ptr<caclient> cli = _fdMap[node];
-    string sendBuf = js.dump();
-    cli->ca_send_message(sendBuf);
-    conn->send(cli->ca_receive_message());
+    client_get(conn, js, time);
 }
 void coordination_Service::client_update(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
-    string key = js["key"].get<string>();
-    string value = js["value"].get<string>();
-    //TODO 
-    
-    string node = hashring.search_by_name(key);
-    shared_ptr<caclient> cli= _fdMap[node];
-    string sendBuf = js.dump();
-    cli->ca_send_message(sendBuf);
-    conn->send(cli->ca_receive_message());
+    client_get(conn, js, time);
 }
 
 void coordination_Service::slave_ACK(const TcpConnectionPtr &conn, json &js, Timestamp time)
@@ -72,13 +169,20 @@ void coordination_Service::slave_ACK(const TcpConnectionPtr &conn, json &js, Tim
 
     shared_ptr<caclient> cli = make_shared<caclient>(ip,stoi(port));
     int fd = cli->ca_connecting(); //与服务器建立连接
+    cli->ip_port_self = name;
+    root = insert(root, CRC32(name), name);
 
-    hashring.add_real_node(name,300);
+    /*
+    插入B
+    此处需要查询节点-若之前无节点，直接添加，
+    若之前有一个节点A：
+        遍历A，将所有节点选择出属于B的节点。将B节点作为backup。选择出属于A的节点。
+        将A，B节点分别发送给B，A作为B的backup
 
-    //此处进行哈希环注册
-    //LOG_INFO("accept fd  %d********* %s",stoi(port),ip.c_str());
-    //cout << port << " " << ip << endl;
-    //TODO 
+    若有两个节点及以上A -> pre C->next：
+        遍历C节点，选出属于B的节点，将B节点作为C的新的backup。将原来的backup作为B的Backup
+        */
+
     _fdMap[name] = cli;
     json res;
     res["type"] = SLAVE_SEVER_CONNECT_ACK; //发送连接数据
@@ -102,8 +206,9 @@ MsgHandler coordination_Service::getHandler(int msgid)
         return _msgHandlerMap[msgid];
     }
 }
-coordination_Service::coordination_Service()
+coordination_Service::coordination_Service():root(nullptr)
 {
+
     // 用户基本业务管理相关事件处理回调注册
     _msgHandlerMap.insert({CLIENT_CONNECT, std::bind(&coordination_Service::clientACK, this, _1, _2, _3)});
     _msgHandlerMap.insert({CLIENT_PUT, std::bind(&coordination_Service::client_put, this, _1, _2, _3)});
@@ -114,3 +219,4 @@ coordination_Service::coordination_Service()
     _msgHandlerMap.insert({SLAVE_SEVER_CONNECT, std::bind(&coordination_Service::slave_ACK, this, _1, _2, _3)});
     
 }
+

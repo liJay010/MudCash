@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/caches/avl.hpp
+string
+-
+iostream
+-
+
+/storage4/lxj/Cplus/MudCash/src/hash/main.cpp
+avl.hpp
+/storage4/lxj/Cplus/MudCash/src/hash/avl.hpp
+iostream
+-
+string
+-
+

@@ -6,17 +6,57 @@
 
 #IncludeRegexTransform: 
 
+../include/caches/SkipList.h
+iostream
+-
+cstdlib
+-
+cmath
+-
+cstring
+-
+mutex
+-
+fstream
+-
+cstdlib
+-
+memory
+-
+vector
+-
+utility
+-
+
+../include/caches/avl.hpp
+string
+-
+iostream
+-
+
 ../include/caches/caclient.h
 string
 -
+
+../include/caches/consistent_hash.h
+string
+../include/caches/string
+SkipList.h
+../include/caches/SkipList.h
+unordered_map
+../include/caches/unordered_map
+unordered_set
+../include/caches/unordered_set
+vector
+../include/caches/vector
+iostream
+../include/caches/iostream
 
 ../include/caches/coordination_Service.h
 string
 -
 TcpServer.h
 ../include/caches/TcpServer.h
-Logger.h
-../include/caches/Logger.h
 string
 -
 functional
@@ -25,8 +65,16 @@ unordered_map
 -
 mutex
 -
+consistent_hash.h
+../include/caches/consistent_hash.h
 json.hpp
 ../include/caches/json.hpp
+caclient.h
+../include/caches/caclient.h
+memory
+-
+avl.hpp
+../include/caches/avl.hpp
 
 ../include/caches/coordination_server.h
 string
@@ -557,8 +605,12 @@ global.h
 /storage4/lxj/Cplus/MudCash/src/coserver/global.h
 caclient.h
 /storage4/lxj/Cplus/MudCash/src/coserver/caclient.h
+memory
+-
 iostream
 -
+Logger.h
+/storage4/lxj/Cplus/MudCash/src/coserver/Logger.h
 
 /storage4/lxj/Cplus/MudCash/src/coserver/coordination_server.cpp
 coordination_server.h
@@ -581,4 +633,8 @@ functional
 -
 coordination_server.h
 /storage4/lxj/Cplus/MudCash/src/coserver/coordination_server.h
+
+/storage4/lxj/Cplus/MudCash/src/hash/consistent_hash.cpp
+consistent_hash.h
+/storage4/lxj/Cplus/MudCash/src/hash/consistent_hash.h
 

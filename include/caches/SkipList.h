@@ -416,6 +416,7 @@ V SkipList<K, V>::search_element(K key) {
     return this->_header->forward[0]->get_value();
 }
 
+
 template<typename K, typename V>
 bool SkipList<K, V>::find_element(K key,V *value)
 {

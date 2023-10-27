@@ -1,6 +1,12 @@
 #pragma once
 #include <string>
 
+struct RECV
+{
+    std::string res;
+    int cnt;
+};
+
 class caclient
 {
 public:
@@ -11,11 +17,12 @@ public:
     void ca_start();
     void ca_closing();
     void ca_send_message(std::string  msg);
-    std::string ca_receive_message();
+    RECV ca_receive_message();
 
 
     int fd_; 
     std::string ip;//服务器端ip
     int port;//服务器端端口
+    std::string ip_port_self;//服务器端ip
 };
 

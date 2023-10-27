@@ -42,7 +42,7 @@ void SlaveServer::start()
     js["ip_port"] = node_name; //发送连接数据
     string sendBuf = js.dump();
     cli.ca_send_message(sendBuf);
-    cout << cli.ca_receive_message() <<endl;
+    cout << cli.ca_receive_message().res <<endl;
     cli.ca_closing();
 }
 // 连接建立或者断开的回调
@@ -75,16 +75,4 @@ void SlaveServer::onMessage(const TcpConnectionPtr &conn,
     auto msgHandler = slaveService::instance()->getHandler(js["type"].get<int>());
     // 回调消息绑定好的事件处理器，来执行相应的业务处理
     msgHandler(conn, js, time);
-}
-
-std::string SlaveServer::getName(std::string tag)
-{
-    if(tag == "pre") return pre_node;
-    else if(tag == "next") return next_node;
-    else return node_name;
-}
-void SlaveServer::setName(std::string tag)
-{
-    if(tag == "pre")  pre_node = tag;
-    else next_node = tag;
 }

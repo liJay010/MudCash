@@ -1,1 +1,1 @@
-/usr/bin/c++  -g --std=c++14 -fPIC -rdynamic CMakeFiles/caclient.dir/caclient.cpp.o CMakeFiles/caclient.dir/test_client.cpp.o -o /storage4/lxj/Cplus/MudCash/bin/caclient   -L/storage4/lxj/Cplus/MudCash/lib 
+/usr/bin/c++   -g --std=c++14 -fPIC  -rdynamic CMakeFiles/caclient.dir/caclient.cpp.o CMakeFiles/caclient.dir/test_client.cpp.o  -o ../../../bin/caclient  -L/storage4/lxj/Cplus/MudCash/lib 

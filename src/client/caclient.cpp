@@ -55,7 +55,7 @@ void caclient::ca_start()
     string sendBuf = js.dump();
     ca_send_message(sendBuf);
 
-    cout << ca_receive_message() <<endl;;// ack + ready_to_serve -- 接受连接成功的信息
+    cout << ca_receive_message().res <<endl;;// ack + ready_to_serve -- 接受连接成功的信息
 
     
     while (true)
@@ -82,7 +82,7 @@ void caclient::ca_start()
 
             sendBuf = js.dump();
             ca_send_message(sendBuf);
-            cout << ca_receive_message() <<endl;
+            cout << ca_receive_message().res <<endl;
      	    //request_for_get_delete(type,key,fd_);
         } 
 
@@ -98,7 +98,7 @@ void caclient::ca_start()
 
             sendBuf = js.dump();
             ca_send_message(sendBuf);
-            cout << ca_receive_message() <<endl;
+            cout << ca_receive_message().res <<endl;
             //request_for_update_put(type,key,value,fd_);
         }
         cout<<endl;
@@ -118,10 +118,15 @@ void caclient::ca_send_message(string  msg)
   	strcpy(char_array,char_pointer);
   	send(fd_,char_pointer,sizeof(char_array),0);
 }
+
 //接受消息
-string caclient::ca_receive_message()
+RECV caclient::ca_receive_message()
 {   
 	char Received_msg[BUFF_SIZE]={0};
-    recv(fd_,Received_msg,sizeof(Received_msg),0);
-    return string(Received_msg);
+    int code = recv(fd_,Received_msg,sizeof(Received_msg),0);
+    RECV res;
+    res.res = string(Received_msg);
+    res.cnt = code;
+    //cout <<"res - > "<< string(Received_msg) << endl;
+    return res;
 }

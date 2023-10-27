@@ -71,6 +71,6 @@ public:
     void log(std::string msg);
     LockQueue<std::string> m_que;
 private:
-    Logger();
+    Logger(){};
     int logLevel_;
 };

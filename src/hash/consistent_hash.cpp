@@ -68,20 +68,28 @@ std::string consistent_hash::search_by_name(std::string name)
 
     return v_node;
 }
+std::string consistent_hash::search_pre_name(std::string name)
+{
 
+}
+
+std::string consistent_hash::search_next_name(std::string name)
+{
+    unsigned int s = CRC32(name);
+    std::string v_node = this->consistent_hash_list->search_element(s + 1);
+
+    return v_node;
+}
 
 //添加真实节点 -- 第二个参数为虚拟节点个数
 void consistent_hash::add_real_node(std::string ip, unsigned int num)
 {
     std::unordered_set<unsigned int> umap_hash;
-    for(unsigned int i = 0; i < num ; i++ )
-    {
-        std::string ip_port = ip + std::to_string(i);
-        //unsigned int hash_value = my_getMurMurHash(ip_port.c_str(), HASH_LEN);
-        unsigned int hash_value = CRC32(ip_port);
-        umap_hash.insert(hash_value);
-        consistent_hash_list->insert_element(hash_value,ip);
-    }
+    //unsigned int hash_value = my_getMurMurHash(ip_port.c_str(), HASH_LEN);
+    unsigned int hash_value = CRC32(ip);
+    umap_hash.insert(hash_value);
+    consistent_hash_list->insert_element(hash_value,ip);
+
     real_node_map[ip] = umap_hash;
     real_node_sum++;
     this->virtual_node_sum+=num;

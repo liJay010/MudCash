@@ -1,4 +1,5 @@
 #add_subdirectory(net)
+add_subdirectory(hash)
 add_subdirectory(client)
 add_subdirectory(coserver)
 add_subdirectory(slaveserver)

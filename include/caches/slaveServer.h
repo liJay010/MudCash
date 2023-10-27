@@ -26,17 +26,10 @@ private:
     void onMessage(const TcpConnectionPtr &conn,
                 Buffer *buffer,
                 Timestamp time);
-
-    std::string getName(std::string tag);
-    void setName(std::string tag);
-
     EventLoop *loop_;
     TcpServer server_;
 
     std::string node_name; //ip:port
-    std::string pre_node; //ip:port
-    std::string next_node; //ip:port
-
     std::string ip; //对端ip
     int port;//对端port
 };

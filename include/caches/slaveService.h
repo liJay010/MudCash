@@ -8,6 +8,7 @@
 #include <mutex>
 using namespace std;
 #include "json.hpp"
+#include <vector>
 #include "SkipList.h"
 using json = nlohmann::json;
 
@@ -37,4 +38,5 @@ private:
     mutex _connMutex;
     unordered_map<int, MsgHandler> _msgHandlerMap;
     SkipList<string,string> skiplist;
+    vector<string> backup;
 };

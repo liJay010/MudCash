@@ -51,7 +51,11 @@ void slaveService::Slave_PUT(const TcpConnectionPtr &conn, json &js, Timestamp t
 {
     string key = js["key"].get<string>();
     string value = js["value"].get<string>();
+    bool bk = js["back_up"].get<bool>();
     //TODO 
+    //cout << "put --------------------"<<endl;
+    if(bk) backup.push_back(key); //备份key
+
     skiplist.insert_element(key,value);
     json res;
     res["type"] = SLAVE_SEVER_PUT_ACK; //发送连接数据

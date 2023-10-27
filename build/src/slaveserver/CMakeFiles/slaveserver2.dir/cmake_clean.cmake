@@ -1,14 +1,10 @@
 file(REMOVE_RECURSE
-  "/storage4/lxj/Cplus/MudCash/bin/slaveserver2"
-  "/storage4/lxj/Cplus/MudCash/bin/slaveserver2.pdb"
-  "CMakeFiles/slaveserver2.dir/__/client/caclient.cpp.o"
-  "CMakeFiles/slaveserver2.dir/__/client/caclient.cpp.o.d"
   "CMakeFiles/slaveserver2.dir/slaveServer.cpp.o"
-  "CMakeFiles/slaveserver2.dir/slaveServer.cpp.o.d"
   "CMakeFiles/slaveserver2.dir/slaveService.cpp.o"
-  "CMakeFiles/slaveserver2.dir/slaveService.cpp.o.d"
+  "CMakeFiles/slaveserver2.dir/__/client/caclient.cpp.o"
   "CMakeFiles/slaveserver2.dir/test_slave_server2.cc.o"
-  "CMakeFiles/slaveserver2.dir/test_slave_server2.cc.o.d"
+  "../../../bin/slaveserver2.pdb"
+  "../../../bin/slaveserver2"
 )
 
 # Per-language clean rules from dependency scanning.

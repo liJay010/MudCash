@@ -1,0 +1,1546 @@
+[INFO]2023/10/24 10:51:03:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 10:51:03:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 10:51:03:EventLoop 0x7fd242362be0 start looping 
+
+[INFO]2023/10/24 10:51:03:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 10:51:03:EventLoop 0x7fd241b61be0 start looping 
+
+[INFO]2023/10/24 10:51:03:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 10:51:03:EventLoop 0x7fd241360be0 start looping 
+
+[INFO]2023/10/24 10:51:03:func=updateChannel => fd=5 events=3 index=-1 
+
+[INFO]2023/10/24 10:51:03:EventLoop 0x7ffe562c0710 start looping 
+
+[INFO]2023/10/24 10:51:08:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 10:51:08:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 10:51:08:EventLoop 0x7fbaa8573be0 start looping 
+
+[INFO]2023/10/24 10:51:08:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 10:51:08:EventLoop 0x7fbaa7d72be0 start looping 
+
+[INFO]2023/10/24 10:51:08:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 10:51:08:EventLoop 0x7fbaa7571be0 start looping 
+
+[INFO]2023/10/24 10:51:08:func=updateChannel => fd=5 events=3 index=-1 
+
+[INFO]2023/10/24 10:51:08:1 events happened 
+
+[INFO]2023/10/24 10:51:08:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:51:08:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#1] from 127.0.0.1:37842 
+
+[INFO]2023/10/24 10:51:08:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=7
+
+[INFO]2023/10/24 10:51:08:1 events happened 
+
+[INFO]2023/10/24 10:51:08:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:51:08:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 10:51:08:1 events happened 
+
+[INFO]2023/10/24 10:51:08:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:51:08:EventLoop 0x7ffdce0146e0 start looping 
+
+[INFO]2023/10/24 10:51:08:1 events happened 
+
+[INFO]2023/10/24 10:51:08:1 events happened 
+
+[INFO]2023/10/24 10:51:08:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:51:08:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:51:08:TcpServer::newConnection [127.0.0.1:6666] - new connection [127.0.0.1:6666-127.0.0.1:6666#1] from 127.0.0.1:37530 
+
+[INFO]2023/10/24 10:51:08:TcpConnection::handleClose fd=7 state=2 
+
+[INFO]2023/10/24 10:51:08:func=updateChannel => fd=7 events=0 index=1 
+
+[INFO]2023/10/24 10:51:08:TcpConnection::ctor[127.0.0.1:6666-127.0.0.1:6666#1] at fd=8
+
+[INFO]2023/10/24 10:51:08:1 events happened 
+
+[INFO]2023/10/24 10:51:08:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:51:08:TcpServer::removeConnectionInLoop [127.0.0.1:8000] - connection 127.0.0.1:8000-127.0.0.1:8000#1
+
+[INFO]2023/10/24 10:51:08:1 events happened 
+
+[INFO]2023/10/24 10:51:08:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:51:08:func=removeChannel => fd=7
+
+[INFO]2023/10/24 10:51:08:1 events happened 
+
+[INFO]2023/10/24 10:51:08:TcpConnection::dtor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=7 state=0 
+
+[INFO]2023/10/24 10:51:08:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:51:08:func=updateChannel => fd=8 events=3 index=-1 
+
+[INFO]2023/10/24 10:51:16:1 events happened 
+
+[INFO]2023/10/24 10:51:16:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:51:16:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#2] from 127.0.0.1:37856 
+
+[INFO]2023/10/24 10:51:16:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#2] at fd=14
+
+[INFO]2023/10/24 10:51:16:1 events happened 
+
+[INFO]2023/10/24 10:51:16:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:51:16:func=updateChannel => fd=14 events=3 index=-1 
+
+[INFO]2023/10/24 10:51:16:1 events happened 
+
+[INFO]2023/10/24 10:51:16:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:51:20:1 events happened 
+
+[INFO]2023/10/24 10:51:20:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:51:20:1 events happened 
+
+[INFO]2023/10/24 10:51:20:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:51:23:1 events happened 
+
+[INFO]2023/10/24 10:51:23:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:51:23:1 events happened 
+
+[INFO]2023/10/24 10:51:23:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:51:58:1 events happened 
+
+[INFO]2023/10/24 10:51:58:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:52:22:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 10:52:22:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 10:52:22:EventLoop 0x7f9e74f9cbe0 start looping 
+
+[INFO]2023/10/24 10:52:22:func=updateChannel => fd=5 events=3 index=-1 
+
+[INFO]2023/10/24 10:52:22:EventLoop 0x7f9e6fffebe0 start looping 
+
+[INFO]2023/10/24 10:52:22:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 10:52:22:EventLoop 0x7f9e6f7fdbe0 start looping 
+
+[INFO]2023/10/24 10:52:22:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 10:52:22:EventLoop 0x7ffe8b3ef1f0 start looping 
+
+[INFO]2023/10/24 10:52:23:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 10:52:23:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 10:52:23:EventLoop 0x7fc7e2183be0 start looping 
+
+[INFO]2023/10/24 10:52:23:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 10:52:23:EventLoop 0x7fc7e1982be0 start looping 
+
+[INFO]2023/10/24 10:52:23:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 10:52:23:EventLoop 0x7fc7e1181be0 start looping 
+
+[INFO]2023/10/24 10:52:23:func=updateChannel => fd=6 events=3 index=-1 
+
+[INFO]2023/10/24 10:52:23:1 events happened 
+
+[INFO]2023/10/24 10:52:23:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:52:23:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#1] from 127.0.0.1:37904 
+
+[INFO]2023/10/24 10:52:23:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=6
+
+[INFO]2023/10/24 10:52:23:1 events happened 
+
+[INFO]2023/10/24 10:52:23:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:52:23:func=updateChannel => fd=6 events=3 index=-1 
+
+[INFO]2023/10/24 10:52:23:1 events happened 
+
+[INFO]2023/10/24 10:52:23:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:52:23:EventLoop 0x7ffc1d2ddad0 start looping 
+
+[INFO]2023/10/24 10:52:23:1 events happened 
+
+[INFO]2023/10/24 10:52:23:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:52:23:1 events happened 
+
+[INFO]2023/10/24 10:52:23:TcpConnection::handleClose fd=6 state=2 
+
+[INFO]2023/10/24 10:52:23:func=updateChannel => fd=6 events=0 index=1 
+
+[INFO]2023/10/24 10:52:23:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:52:23:1 events happened 
+
+[INFO]2023/10/24 10:52:23:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:52:23:TcpServer::newConnection [127.0.0.1:6666] - new connection [127.0.0.1:6666-127.0.0.1:6666#1] from 127.0.0.1:37592 
+
+[INFO]2023/10/24 10:52:23:TcpServer::removeConnectionInLoop [127.0.0.1:8000] - connection 127.0.0.1:8000-127.0.0.1:8000#1
+
+[INFO]2023/10/24 10:52:23:1 events happened 
+
+[INFO]2023/10/24 10:52:23:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:52:23:TcpConnection::ctor[127.0.0.1:6666-127.0.0.1:6666#1] at fd=7
+
+[INFO]2023/10/24 10:52:23:func=removeChannel => fd=6
+
+[INFO]2023/10/24 10:52:23:TcpConnection::dtor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=6 state=0 
+
+[INFO]2023/10/24 10:52:23:1 events happened 
+
+[INFO]2023/10/24 10:52:23:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:52:23:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 10:52:25:1 events happened 
+
+[INFO]2023/10/24 10:52:25:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:52:25:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#2] from 127.0.0.1:37908 
+
+[INFO]2023/10/24 10:52:25:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#2] at fd=14
+
+[INFO]2023/10/24 10:52:25:1 events happened 
+
+[INFO]2023/10/24 10:52:25:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:52:25:func=updateChannel => fd=14 events=3 index=-1 
+
+[INFO]2023/10/24 10:52:25:1 events happened 
+
+[INFO]2023/10/24 10:52:25:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:52:32:1 events happened 
+
+[INFO]2023/10/24 10:52:32:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:52:32:1 events happened 
+
+[INFO]2023/10/24 10:52:32:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:52:41:1 events happened 
+
+[INFO]2023/10/24 10:52:41:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:52:41:1 events happened 
+
+[INFO]2023/10/24 10:52:41:channel handleEvent revents:1
+
+[INFO]2023/10/24 10:52:52:1 events happened 
+
+[INFO]2023/10/24 10:52:52:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:02:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:09:02:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:09:02:EventLoop 0x7f63be29abe0 start looping 
+
+[INFO]2023/10/24 11:09:02:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:09:02:EventLoop 0x7f63bda99be0 start looping 
+
+[INFO]2023/10/24 11:09:02:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 11:09:02:EventLoop 0x7f63bd298be0 start looping 
+
+[INFO]2023/10/24 11:09:02:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 11:09:02:EventLoop 0x7ffd39613460 start looping 
+
+[INFO]2023/10/24 11:09:03:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:09:03:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:09:03:EventLoop 0x7f17f7ffebe0 start looping 
+
+[INFO]2023/10/24 11:09:03:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:09:03:EventLoop 0x7f17f77fdbe0 start looping 
+
+[INFO]2023/10/24 11:09:03:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 11:09:03:EventLoop 0x7f17f6ffcbe0 start looping 
+
+[INFO]2023/10/24 11:09:03:func=updateChannel => fd=6 events=3 index=-1 
+
+[INFO]2023/10/24 11:09:03:1 events happened 
+
+[INFO]2023/10/24 11:09:03:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:03:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#1] from 127.0.0.1:38808 
+
+[INFO]2023/10/24 11:09:03:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=5
+
+[INFO]2023/10/24 11:09:03:1 events happened 
+
+[INFO]2023/10/24 11:09:03:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:03:func=updateChannel => fd=5 events=3 index=-1 
+
+[INFO]2023/10/24 11:09:03:1 events happened 
+
+[INFO]2023/10/24 11:09:03:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:03:EventLoop 0x7ffc1abac760 start looping 
+
+[INFO]2023/10/24 11:09:03:1 events happened 
+
+[INFO]2023/10/24 11:09:03:1 events happened 
+
+[INFO]2023/10/24 11:09:03:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:03:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:03:TcpServer::newConnection [127.0.0.1:6666] - new connection [127.0.0.1:6666-127.0.0.1:6666#1] from 127.0.0.1:38496 
+
+[INFO]2023/10/24 11:09:03:TcpConnection::handleClose fd=5 state=2 
+
+[INFO]2023/10/24 11:09:03:func=updateChannel => fd=5 events=0 index=1 
+
+[INFO]2023/10/24 11:09:03:1 events happened 
+
+[INFO]2023/10/24 11:09:03:TcpConnection::ctor[127.0.0.1:6666-127.0.0.1:6666#1] at fd=14
+
+[INFO]2023/10/24 11:09:03:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:03:TcpServer::removeConnectionInLoop [127.0.0.1:8000] - connection 127.0.0.1:8000-127.0.0.1:8000#1
+
+[INFO]2023/10/24 11:09:03:1 events happened 
+
+[INFO]2023/10/24 11:09:03:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:03:func=removeChannel => fd=5
+
+[INFO]2023/10/24 11:09:03:TcpConnection::dtor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=5 state=0 
+
+[INFO]2023/10/24 11:09:03:1 events happened 
+
+[INFO]2023/10/24 11:09:03:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:03:func=updateChannel => fd=14 events=3 index=-1 
+
+[INFO]2023/10/24 11:09:05:1 events happened 
+
+[INFO]2023/10/24 11:09:05:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:05:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#2] from 127.0.0.1:38812 
+
+[INFO]2023/10/24 11:09:05:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#2] at fd=14
+
+[INFO]2023/10/24 11:09:05:1 events happened 
+
+[INFO]2023/10/24 11:09:05:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:05:func=updateChannel => fd=14 events=3 index=-1 
+
+[INFO]2023/10/24 11:09:05:1 events happened 
+
+[INFO]2023/10/24 11:09:05:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:09:1 events happened 
+
+[INFO]2023/10/24 11:09:09:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:09:1 events happened 
+
+[INFO]2023/10/24 11:09:09:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:13:1 events happened 
+
+[INFO]2023/10/24 11:09:13:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:13:1 events happened 
+
+[INFO]2023/10/24 11:09:13:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:28:1 events happened 
+
+[INFO]2023/10/24 11:09:28:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:28:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#3] from 127.0.0.1:38826 
+
+[INFO]2023/10/24 11:09:28:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#3] at fd=16
+
+[INFO]2023/10/24 11:09:28:1 events happened 
+
+[INFO]2023/10/24 11:09:28:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:28:func=updateChannel => fd=16 events=3 index=-1 
+
+[INFO]2023/10/24 11:09:28:1 events happened 
+
+[INFO]2023/10/24 11:09:28:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:32:1 events happened 
+
+[INFO]2023/10/24 11:09:32:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:32:1 events happened 
+
+[INFO]2023/10/24 11:09:32:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:32:1 events happened 
+
+[INFO]2023/10/24 11:09:32:channel handleEvent revents:25
+
+[ERROR]2023/10/24 11:09:32:TcpConnection::handleError name:127.0.0.1:8000-127.0.0.1:8000#2 - SO_ERROR:32 
+
+[INFO]2023/10/24 11:09:32:TcpConnection::handleClose fd=14 state=2 
+
+[INFO]2023/10/24 11:09:32:func=updateChannel => fd=14 events=0 index=1 
+
+[INFO]2023/10/24 11:09:32:1 events happened 
+
+[INFO]2023/10/24 11:09:32:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:32:TcpServer::removeConnectionInLoop [127.0.0.1:8000] - connection 127.0.0.1:8000-127.0.0.1:8000#2
+
+[INFO]2023/10/24 11:09:32:1 events happened 
+
+[INFO]2023/10/24 11:09:32:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:09:32:func=removeChannel => fd=14
+
+[INFO]2023/10/24 11:09:32:TcpConnection::dtor[127.0.0.1:8000-127.0.0.1:8000#2] at fd=14 state=0 
+
+[INFO]2023/10/24 11:10:05:1 events happened 
+
+[INFO]2023/10/24 11:10:05:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:05:TcpConnection::handleClose fd=14 state=2 
+
+[INFO]2023/10/24 11:10:05:func=updateChannel => fd=14 events=0 index=1 
+
+[INFO]2023/10/24 11:10:05:1 events happened 
+
+[INFO]2023/10/24 11:10:05:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:05:TcpServer::removeConnectionInLoop [127.0.0.1:6666] - connection 127.0.0.1:6666-127.0.0.1:6666#1
+
+[INFO]2023/10/24 11:10:05:1 events happened 
+
+[INFO]2023/10/24 11:10:05:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:05:func=removeChannel => fd=14
+
+[INFO]2023/10/24 11:10:05:TcpConnection::dtor[127.0.0.1:6666-127.0.0.1:6666#1] at fd=14 state=0 
+
+[INFO]2023/10/24 11:10:14:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:10:14:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:10:14:EventLoop 0x7f8dcea2abe0 start looping 
+
+[INFO]2023/10/24 11:10:14:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:10:14:EventLoop 0x7f8dce229be0 start looping 
+
+[INFO]2023/10/24 11:10:14:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 11:10:14:EventLoop 0x7f8dcda28be0 start looping 
+
+[INFO]2023/10/24 11:10:14:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 11:10:14:EventLoop 0x7ffe5f96f500 start looping 
+
+[INFO]2023/10/24 11:10:15:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:10:15:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:10:15:EventLoop 0x7fca6a229be0 start looping 
+
+[INFO]2023/10/24 11:10:15:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:10:15:EventLoop 0x7fca69a28be0 start looping 
+
+[INFO]2023/10/24 11:10:15:func=updateChannel => fd=6 events=3 index=-1 
+
+[INFO]2023/10/24 11:10:15:EventLoop 0x7fca69227be0 start looping 
+
+[INFO]2023/10/24 11:10:15:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 11:10:15:1 events happened 
+
+[INFO]2023/10/24 11:10:15:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:15:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#1] from 127.0.0.1:38866 
+
+[INFO]2023/10/24 11:10:15:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=5
+
+[INFO]2023/10/24 11:10:15:1 events happened 
+
+[INFO]2023/10/24 11:10:15:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:15:func=updateChannel => fd=5 events=3 index=-1 
+
+[INFO]2023/10/24 11:10:15:1 events happened 
+
+[INFO]2023/10/24 11:10:15:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:15:1 events happened 
+
+[INFO]2023/10/24 11:10:15:EventLoop 0x7ffcb19d3c00 start looping 
+
+[INFO]2023/10/24 11:10:15:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:15:1 events happened 
+
+[INFO]2023/10/24 11:10:15:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:15:TcpConnection::handleClose fd=5 state=2 
+
+[INFO]2023/10/24 11:10:15:TcpServer::newConnection [127.0.0.1:6666] - new connection [127.0.0.1:6666-127.0.0.1:6666#1] from 127.0.0.1:38554 
+
+[INFO]2023/10/24 11:10:15:func=updateChannel => fd=5 events=0 index=1 
+
+[INFO]2023/10/24 11:10:15:1 events happened 
+
+[INFO]2023/10/24 11:10:15:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:15:TcpConnection::ctor[127.0.0.1:6666-127.0.0.1:6666#1] at fd=13
+
+[INFO]2023/10/24 11:10:15:TcpServer::removeConnectionInLoop [127.0.0.1:8000] - connection 127.0.0.1:8000-127.0.0.1:8000#1
+
+[INFO]2023/10/24 11:10:15:1 events happened 
+
+[INFO]2023/10/24 11:10:15:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:15:func=removeChannel => fd=5
+
+[INFO]2023/10/24 11:10:15:TcpConnection::dtor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=5 state=0 
+
+[INFO]2023/10/24 11:10:15:1 events happened 
+
+[INFO]2023/10/24 11:10:15:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:15:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 11:10:17:1 events happened 
+
+[INFO]2023/10/24 11:10:17:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:17:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#2] from 127.0.0.1:38870 
+
+[INFO]2023/10/24 11:10:17:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#2] at fd=14
+
+[INFO]2023/10/24 11:10:17:1 events happened 
+
+[INFO]2023/10/24 11:10:17:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:17:func=updateChannel => fd=14 events=3 index=-1 
+
+[INFO]2023/10/24 11:10:17:1 events happened 
+
+[INFO]2023/10/24 11:10:17:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:22:1 events happened 
+
+[INFO]2023/10/24 11:10:22:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:22:1 events happened 
+
+[INFO]2023/10/24 11:10:22:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:27:1 events happened 
+
+[INFO]2023/10/24 11:10:27:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:27:1 events happened 
+
+[INFO]2023/10/24 11:10:27:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:56:1 events happened 
+
+[INFO]2023/10/24 11:10:56:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:56:TcpConnection::handleClose fd=14 state=2 
+
+[INFO]2023/10/24 11:10:56:func=updateChannel => fd=14 events=0 index=1 
+
+[INFO]2023/10/24 11:10:56:1 events happened 
+
+[INFO]2023/10/24 11:10:56:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:56:TcpServer::removeConnectionInLoop [127.0.0.1:8000] - connection 127.0.0.1:8000-127.0.0.1:8000#2
+
+[INFO]2023/10/24 11:10:56:1 events happened 
+
+[INFO]2023/10/24 11:10:56:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:10:56:func=removeChannel => fd=14
+
+[INFO]2023/10/24 11:10:56:TcpConnection::dtor[127.0.0.1:8000-127.0.0.1:8000#2] at fd=14 state=0 
+
+[INFO]2023/10/24 11:11:04:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:11:04:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:11:04:EventLoop 0x7fad2bccdbe0 start looping 
+
+[INFO]2023/10/24 11:11:04:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:11:04:EventLoop 0x7fad2b4ccbe0 start looping 
+
+[INFO]2023/10/24 11:11:04:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 11:11:04:EventLoop 0x7fad2accbbe0 start looping 
+
+[INFO]2023/10/24 11:11:04:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 11:11:04:EventLoop 0x7fff216f7200 start looping 
+
+[INFO]2023/10/24 11:11:06:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:11:06:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:11:06:EventLoop 0x7fef6d339be0 start looping 
+
+[INFO]2023/10/24 11:11:06:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:11:06:EventLoop 0x7fef6cb38be0 start looping 
+
+[INFO]2023/10/24 11:11:06:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 11:11:06:EventLoop 0x7fef5fffebe0 start looping 
+
+[INFO]2023/10/24 11:11:06:func=updateChannel => fd=6 events=3 index=-1 
+
+[INFO]2023/10/24 11:11:06:1 events happened 
+
+[INFO]2023/10/24 11:11:06:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:11:06:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#1] from 127.0.0.1:38910 
+
+[INFO]2023/10/24 11:11:06:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=5
+
+[INFO]2023/10/24 11:11:06:1 events happened 
+
+[INFO]2023/10/24 11:11:06:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:11:06:func=updateChannel => fd=5 events=3 index=-1 
+
+[INFO]2023/10/24 11:11:06:1 events happened 
+
+[INFO]2023/10/24 11:11:06:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:11:06:EventLoop 0x7ffe5c8af530 start looping 
+
+[INFO]2023/10/24 11:11:06:1 events happened 
+
+[INFO]2023/10/24 11:11:06:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:11:06:1 events happened 
+
+[INFO]2023/10/24 11:11:06:TcpConnection::handleClose fd=5 state=2 
+
+[INFO]2023/10/24 11:11:06:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:11:06:func=updateChannel => fd=5 events=0 index=1 
+
+[INFO]2023/10/24 11:11:06:1 events happened 
+
+[INFO]2023/10/24 11:11:06:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:11:06:TcpServer::removeConnectionInLoop [127.0.0.1:8000] - connection 127.0.0.1:8000-127.0.0.1:8000#1
+
+[INFO]2023/10/24 11:11:06:1 events happened 
+
+[INFO]2023/10/24 11:11:06:TcpServer::newConnection [127.0.0.1:6666] - new connection [127.0.0.1:6666-127.0.0.1:6666#1] from 127.0.0.1:38598 
+
+[INFO]2023/10/24 11:11:06:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:11:06:func=removeChannel => fd=5
+
+[INFO]2023/10/24 11:11:06:TcpConnection::dtor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=5 state=0 
+
+[INFO]2023/10/24 11:11:06:TcpConnection::ctor[127.0.0.1:6666-127.0.0.1:6666#1] at fd=5
+
+[INFO]2023/10/24 11:11:06:1 events happened 
+
+[INFO]2023/10/24 11:11:06:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:11:06:func=updateChannel => fd=5 events=3 index=-1 
+
+[INFO]2023/10/24 11:11:07:1 events happened 
+
+[INFO]2023/10/24 11:11:07:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:11:07:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#2] from 127.0.0.1:38914 
+
+[INFO]2023/10/24 11:11:07:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#2] at fd=14
+
+[INFO]2023/10/24 11:11:07:1 events happened 
+
+[INFO]2023/10/24 11:11:07:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:11:07:func=updateChannel => fd=14 events=3 index=-1 
+
+[INFO]2023/10/24 11:11:07:1 events happened 
+
+[INFO]2023/10/24 11:11:07:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:11:11:1 events happened 
+
+[INFO]2023/10/24 11:11:11:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:11:11:1 events happened 
+
+[INFO]2023/10/24 11:11:11:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:11:16:1 events happened 
+
+[INFO]2023/10/24 11:11:16:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:11:16:1 events happened 
+
+[INFO]2023/10/24 11:11:16:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:12:21:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:12:21:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:12:21:EventLoop 0x7f4f2543dbe0 start looping 
+
+[INFO]2023/10/24 11:12:21:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:12:21:EventLoop 0x7f4f24c3cbe0 start looping 
+
+[INFO]2023/10/24 11:12:21:func=updateChannel => fd=6 events=3 index=-1 
+
+[INFO]2023/10/24 11:12:21:EventLoop 0x7f4f17ffebe0 start looping 
+
+[INFO]2023/10/24 11:12:21:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 11:12:21:EventLoop 0x7fffc91c7cd0 start looping 
+
+[INFO]2023/10/24 11:12:22:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:12:22:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:12:22:EventLoop 0x7f38f8e89be0 start looping 
+
+[INFO]2023/10/24 11:12:22:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:12:22:EventLoop 0x7f38f3ffebe0 start looping 
+
+[INFO]2023/10/24 11:12:22:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 11:12:22:EventLoop 0x7f38f37fdbe0 start looping 
+
+[INFO]2023/10/24 11:12:22:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 11:12:22:1 events happened 
+
+[INFO]2023/10/24 11:12:22:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:12:22:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#1] from 127.0.0.1:38972 
+
+[INFO]2023/10/24 11:12:22:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=13
+
+[INFO]2023/10/24 11:12:22:1 events happened 
+
+[INFO]2023/10/24 11:12:22:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:12:22:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 11:12:22:1 events happened 
+
+[INFO]2023/10/24 11:12:22:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:12:22:1 events happened 
+
+[INFO]2023/10/24 11:12:22:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:12:22:TcpConnection::handleClose fd=13 state=2 
+
+[INFO]2023/10/24 11:12:22:func=updateChannel => fd=13 events=0 index=1 
+
+[INFO]2023/10/24 11:12:22:EventLoop 0x7ffeec5d02b0 start looping 
+
+[INFO]2023/10/24 11:12:22:1 events happened 
+
+[INFO]2023/10/24 11:12:22:1 events happened 
+
+[INFO]2023/10/24 11:12:22:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:12:22:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:12:22:TcpServer::newConnection [127.0.0.1:6666] - new connection [127.0.0.1:6666-127.0.0.1:6666#1] from 127.0.0.1:38660 
+
+[INFO]2023/10/24 11:12:22:TcpServer::removeConnectionInLoop [127.0.0.1:8000] - connection 127.0.0.1:8000-127.0.0.1:8000#1
+
+[INFO]2023/10/24 11:12:22:TcpConnection::ctor[127.0.0.1:6666-127.0.0.1:6666#1] at fd=6
+
+[INFO]2023/10/24 11:12:22:1 events happened 
+
+[INFO]2023/10/24 11:12:22:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:12:22:func=removeChannel => fd=13
+
+[INFO]2023/10/24 11:12:22:TcpConnection::dtor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=13 state=0 
+
+[INFO]2023/10/24 11:12:22:1 events happened 
+
+[INFO]2023/10/24 11:12:22:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:12:22:func=updateChannel => fd=6 events=3 index=-1 
+
+[INFO]2023/10/24 11:12:24:1 events happened 
+
+[INFO]2023/10/24 11:12:24:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:12:24:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#2] from 127.0.0.1:38976 
+
+[INFO]2023/10/24 11:12:24:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#2] at fd=14
+
+[INFO]2023/10/24 11:12:24:1 events happened 
+
+[INFO]2023/10/24 11:12:24:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:12:24:func=updateChannel => fd=14 events=3 index=-1 
+
+[INFO]2023/10/24 11:12:24:1 events happened 
+
+[INFO]2023/10/24 11:12:24:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:12:40:1 events happened 
+
+[INFO]2023/10/24 11:12:40:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:12:40:1 events happened 
+
+[INFO]2023/10/24 11:12:40:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:12:45:1 events happened 
+
+[INFO]2023/10/24 11:12:45:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:12:45:1 events happened 
+
+[INFO]2023/10/24 11:12:45:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:13:52:1 events happened 
+
+[INFO]2023/10/24 11:13:52:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:13:52:TcpConnection::handleClose fd=14 state=2 
+
+[INFO]2023/10/24 11:13:52:func=updateChannel => fd=14 events=0 index=1 
+
+[INFO]2023/10/24 11:13:52:1 events happened 
+
+[INFO]2023/10/24 11:13:52:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:13:52:TcpServer::removeConnectionInLoop [127.0.0.1:8000] - connection 127.0.0.1:8000-127.0.0.1:8000#2
+
+[INFO]2023/10/24 11:13:52:1 events happened 
+
+[INFO]2023/10/24 11:13:52:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:13:52:func=removeChannel => fd=14
+
+[INFO]2023/10/24 11:13:52:TcpConnection::dtor[127.0.0.1:8000-127.0.0.1:8000#2] at fd=14 state=0 
+
+[INFO]2023/10/24 11:14:33:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:14:33:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:14:33:EventLoop 0x7f5857ffebe0 start looping 
+
+[INFO]2023/10/24 11:14:33:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:14:33:EventLoop 0x7f58577fdbe0 start looping 
+
+[INFO]2023/10/24 11:14:33:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 11:14:33:EventLoop 0x7f5856ffcbe0 start looping 
+
+[INFO]2023/10/24 11:14:33:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 11:14:33:EventLoop 0x7ffe6d35e8b0 start looping 
+
+[INFO]2023/10/24 11:14:34:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:14:34:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:14:34:EventLoop 0x7f0f25361be0 start looping 
+
+[INFO]2023/10/24 11:14:34:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:14:34:EventLoop 0x7f0f24b60be0 start looping 
+
+[INFO]2023/10/24 11:14:34:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 11:14:34:EventLoop 0x7f0f17ffebe0 start looping 
+
+[INFO]2023/10/24 11:14:34:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 11:14:34:1 events happened 
+
+[INFO]2023/10/24 11:14:34:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:14:34:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#1] from 127.0.0.1:39070 
+
+[INFO]2023/10/24 11:14:34:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=6
+
+[INFO]2023/10/24 11:14:34:1 events happened 
+
+[INFO]2023/10/24 11:14:34:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:14:34:func=updateChannel => fd=6 events=3 index=-1 
+
+[INFO]2023/10/24 11:14:34:1 events happened 
+
+[INFO]2023/10/24 11:14:34:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:14:34:1 events happened 
+
+[INFO]2023/10/24 11:14:34:EventLoop 0x7fff14ca1e70 start looping 
+
+[INFO]2023/10/24 11:14:34:1 events happened 
+
+[INFO]2023/10/24 11:14:34:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:14:34:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:14:34:TcpConnection::handleClose fd=6 state=2 
+
+[INFO]2023/10/24 11:14:34:TcpServer::newConnection [127.0.0.1:6666] - new connection [127.0.0.1:6666-127.0.0.1:6666#1] from 127.0.0.1:38758 
+
+[INFO]2023/10/24 11:14:34:func=updateChannel => fd=6 events=0 index=1 
+
+[INFO]2023/10/24 11:14:34:1 events happened 
+
+[INFO]2023/10/24 11:14:34:TcpConnection::ctor[127.0.0.1:6666-127.0.0.1:6666#1] at fd=5
+
+[INFO]2023/10/24 11:14:34:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:14:34:TcpServer::removeConnectionInLoop [127.0.0.1:8000] - connection 127.0.0.1:8000-127.0.0.1:8000#1
+
+[INFO]2023/10/24 11:14:34:1 events happened 
+
+[INFO]2023/10/24 11:14:34:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:14:34:func=removeChannel => fd=6
+
+[INFO]2023/10/24 11:14:34:TcpConnection::dtor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=6 state=0 
+
+[INFO]2023/10/24 11:14:34:1 events happened 
+
+[INFO]2023/10/24 11:14:34:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:14:34:func=updateChannel => fd=5 events=3 index=-1 
+
+[INFO]2023/10/24 11:14:36:1 events happened 
+
+[INFO]2023/10/24 11:14:36:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:14:36:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#2] from 127.0.0.1:39074 
+
+[INFO]2023/10/24 11:14:36:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#2] at fd=6
+
+[INFO]2023/10/24 11:14:36:1 events happened 
+
+[INFO]2023/10/24 11:14:36:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:14:36:func=updateChannel => fd=6 events=3 index=-1 
+
+[INFO]2023/10/24 11:14:36:1 events happened 
+
+[INFO]2023/10/24 11:14:36:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:14:41:1 events happened 
+
+[INFO]2023/10/24 11:14:41:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:14:41:1 events happened 
+
+[INFO]2023/10/24 11:14:41:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:15:44:1 events happened 
+
+[INFO]2023/10/24 11:15:44:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:15:44:1 events happened 
+
+[INFO]2023/10/24 11:15:44:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:15:51:1 events happened 
+
+[INFO]2023/10/24 11:15:51:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:15:51:TcpConnection::handleClose fd=5 state=2 
+
+[INFO]2023/10/24 11:15:51:func=updateChannel => fd=5 events=0 index=1 
+
+[INFO]2023/10/24 11:15:51:1 events happened 
+
+[INFO]2023/10/24 11:15:51:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:15:51:TcpServer::removeConnectionInLoop [127.0.0.1:6666] - connection 127.0.0.1:6666-127.0.0.1:6666#1
+
+[INFO]2023/10/24 11:15:51:1 events happened 
+
+[INFO]2023/10/24 11:15:51:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:15:51:func=removeChannel => fd=5
+
+[INFO]2023/10/24 11:15:51:TcpConnection::dtor[127.0.0.1:6666-127.0.0.1:6666#1] at fd=5 state=0 
+
+[INFO]2023/10/24 11:16:19:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:16:19:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:16:19:EventLoop 0x7f6dd92d1be0 start looping 
+
+[INFO]2023/10/24 11:16:19:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:16:19:EventLoop 0x7f6dd8ad0be0 start looping 
+
+[INFO]2023/10/24 11:16:19:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 11:16:19:EventLoop 0x7f6dcbffebe0 start looping 
+
+[INFO]2023/10/24 11:16:19:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 11:16:19:EventLoop 0x7ffece844cd0 start looping 
+
+[INFO]2023/10/24 11:16:21:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:16:21:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:16:21:EventLoop 0x7fc4b16b1be0 start looping 
+
+[INFO]2023/10/24 11:16:21:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:16:21:EventLoop 0x7fc4b0eb0be0 start looping 
+
+[INFO]2023/10/24 11:16:21:func=updateChannel => fd=12 events=3 index=-1 
+
+[INFO]2023/10/24 11:16:21:EventLoop 0x7fc4a3ffebe0 start looping 
+
+[INFO]2023/10/24 11:16:21:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 11:16:21:1 events happened 
+
+[INFO]2023/10/24 11:16:21:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:16:21:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#1] from 127.0.0.1:39164 
+
+[INFO]2023/10/24 11:16:21:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=5
+
+[INFO]2023/10/24 11:16:21:1 events happened 
+
+[INFO]2023/10/24 11:16:21:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:16:21:func=updateChannel => fd=5 events=3 index=-1 
+
+[INFO]2023/10/24 11:16:21:1 events happened 
+
+[INFO]2023/10/24 11:16:21:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:16:21:1 events happened 
+
+[INFO]2023/10/24 11:16:21:EventLoop 0x7ffdb6325910 start looping 
+
+[INFO]2023/10/24 11:16:21:1 events happened 
+
+[INFO]2023/10/24 11:16:21:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:16:21:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:16:21:TcpConnection::handleClose fd=5 state=2 
+
+[INFO]2023/10/24 11:16:21:TcpServer::newConnection [127.0.0.1:6666] - new connection [127.0.0.1:6666-127.0.0.1:6666#1] from 127.0.0.1:38852 
+
+[INFO]2023/10/24 11:16:21:func=updateChannel => fd=5 events=0 index=1 
+
+[INFO]2023/10/24 11:16:21:TcpConnection::ctor[127.0.0.1:6666-127.0.0.1:6666#1] at fd=6
+
+[INFO]2023/10/24 11:16:21:1 events happened 
+
+[INFO]2023/10/24 11:16:21:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:16:21:TcpServer::removeConnectionInLoop [127.0.0.1:8000] - connection 127.0.0.1:8000-127.0.0.1:8000#1
+
+[INFO]2023/10/24 11:16:21:1 events happened 
+
+[INFO]2023/10/24 11:16:21:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:16:21:func=removeChannel => fd=5
+
+[INFO]2023/10/24 11:16:21:TcpConnection::dtor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=5 state=0 
+
+[INFO]2023/10/24 11:16:21:1 events happened 
+
+[INFO]2023/10/24 11:16:21:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:16:21:func=updateChannel => fd=6 events=3 index=-1 
+
+[INFO]2023/10/24 11:16:22:1 events happened 
+
+[INFO]2023/10/24 11:16:22:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:16:22:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#2] from 127.0.0.1:39168 
+
+[INFO]2023/10/24 11:16:22:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#2] at fd=14
+
+[INFO]2023/10/24 11:16:22:1 events happened 
+
+[INFO]2023/10/24 11:16:22:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:16:22:func=updateChannel => fd=14 events=3 index=-1 
+
+[INFO]2023/10/24 11:16:22:1 events happened 
+
+[INFO]2023/10/24 11:16:22:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:16:27:1 events happened 
+
+[INFO]2023/10/24 11:16:27:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:16:27:1 events happened 
+
+[INFO]2023/10/24 11:16:27:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:16:30:1 events happened 
+
+[INFO]2023/10/24 11:16:30:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:16:30:1 events happened 
+
+[INFO]2023/10/24 11:16:30:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:16:52:1 events happened 
+
+[INFO]2023/10/24 11:16:52:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:18:51:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:18:51:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:18:51:EventLoop 0x7f130dc00be0 start looping 
+
+[INFO]2023/10/24 11:18:51:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:18:51:EventLoop 0x7f130d3ffbe0 start looping 
+
+[INFO]2023/10/24 11:18:51:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 11:18:51:EventLoop 0x7f130cbfebe0 start looping 
+
+[INFO]2023/10/24 11:18:51:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 11:18:51:EventLoop 0x7ffe37230620 start looping 
+
+[INFO]2023/10/24 11:18:52:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:18:52:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:18:52:EventLoop 0x7fb5dfba0be0 start looping 
+
+[INFO]2023/10/24 11:18:52:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:18:52:EventLoop 0x7fb5df39fbe0 start looping 
+
+[INFO]2023/10/24 11:18:52:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 11:18:52:EventLoop 0x7fb5deb9ebe0 start looping 
+
+[INFO]2023/10/24 11:18:52:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 11:18:52:1 events happened 
+
+[INFO]2023/10/24 11:18:52:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:18:52:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#1] from 127.0.0.1:39306 
+
+[INFO]2023/10/24 11:18:52:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=14
+
+[INFO]2023/10/24 11:18:52:1 events happened 
+
+[INFO]2023/10/24 11:18:52:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:18:52:func=updateChannel => fd=14 events=3 index=-1 
+
+[INFO]2023/10/24 11:18:52:1 events happened 
+
+[INFO]2023/10/24 11:18:52:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:18:52:1 events happened 
+
+[INFO]2023/10/24 11:18:52:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:18:52:EventLoop 0x7fff4dbfe100 start looping 
+
+[INFO]2023/10/24 11:18:52:TcpConnection::handleClose fd=14 state=2 
+
+[INFO]2023/10/24 11:18:52:func=updateChannel => fd=14 events=0 index=1 
+
+[INFO]2023/10/24 11:18:52:1 events happened 
+
+[INFO]2023/10/24 11:18:52:1 events happened 
+
+[INFO]2023/10/24 11:18:52:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:18:52:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:18:52:TcpServer::removeConnectionInLoop [127.0.0.1:8000] - connection 127.0.0.1:8000-127.0.0.1:8000#1
+
+[INFO]2023/10/24 11:18:52:TcpServer::newConnection [127.0.0.1:6666] - new connection [127.0.0.1:6666-127.0.0.1:6666#1] from 127.0.0.1:38994 
+
+[INFO]2023/10/24 11:18:52:1 events happened 
+
+[INFO]2023/10/24 11:18:52:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:18:52:func=removeChannel => fd=14
+
+[INFO]2023/10/24 11:18:52:TcpConnection::ctor[127.0.0.1:6666-127.0.0.1:6666#1] at fd=6
+
+[INFO]2023/10/24 11:18:52:TcpConnection::dtor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=14 state=0 
+
+[INFO]2023/10/24 11:18:52:1 events happened 
+
+[INFO]2023/10/24 11:18:52:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:18:52:func=updateChannel => fd=6 events=3 index=-1 
+
+[INFO]2023/10/24 11:18:53:1 events happened 
+
+[INFO]2023/10/24 11:18:53:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:18:53:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#2] from 127.0.0.1:39312 
+
+[INFO]2023/10/24 11:18:53:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#2] at fd=14
+
+[INFO]2023/10/24 11:18:53:1 events happened 
+
+[INFO]2023/10/24 11:18:53:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:18:53:func=updateChannel => fd=14 events=3 index=-1 
+
+[INFO]2023/10/24 11:18:53:1 events happened 
+
+[INFO]2023/10/24 11:18:53:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:19:09:1 events happened 
+
+[INFO]2023/10/24 11:19:09:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:19:09:1 events happened 
+
+[INFO]2023/10/24 11:19:09:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:19:12:1 events happened 
+
+[INFO]2023/10/24 11:19:12:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:19:12:1 events happened 
+
+[INFO]2023/10/24 11:19:12:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:19:27:1 events happened 
+
+[INFO]2023/10/24 11:19:27:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:19:34:1 events happened 
+
+[INFO]2023/10/24 11:19:34:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:19:53:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:19:53:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:19:53:EventLoop 0x7fcc32f7ebe0 start looping 
+
+[INFO]2023/10/24 11:19:53:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:19:53:EventLoop 0x7fcc3277dbe0 start looping 
+
+[INFO]2023/10/24 11:19:53:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 11:19:53:EventLoop 0x7fcc31f7cbe0 start looping 
+
+[INFO]2023/10/24 11:19:53:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 11:19:57:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:19:57:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:19:57:EventLoop 0x7f744624ebe0 start looping 
+
+[INFO]2023/10/24 11:19:57:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:19:57:EventLoop 0x7f7445a4dbe0 start looping 
+
+[INFO]2023/10/24 11:19:57:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 11:19:57:EventLoop 0x7f744524cbe0 start looping 
+
+[INFO]2023/10/24 11:19:57:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 11:19:57:EventLoop 0x7ffda43178e0 start looping 
+
+[INFO]2023/10/24 11:20:00:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 11:20:00:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 11:20:00:EventLoop 0x7fd96af01be0 start looping 
+
+[INFO]2023/10/24 11:20:00:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 11:20:00:EventLoop 0x7fd96a700be0 start looping 
+
+[INFO]2023/10/24 11:20:00:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 11:20:00:EventLoop 0x7fd969effbe0 start looping 
+
+[INFO]2023/10/24 11:20:00:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 11:20:00:1 events happened 
+
+[INFO]2023/10/24 11:20:00:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:20:00:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#1] from 127.0.0.1:39352 
+
+[INFO]2023/10/24 11:20:00:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=6
+
+[INFO]2023/10/24 11:20:00:1 events happened 
+
+[INFO]2023/10/24 11:20:00:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:20:00:func=updateChannel => fd=6 events=3 index=-1 
+
+[INFO]2023/10/24 11:20:00:1 events happened 
+
+[INFO]2023/10/24 11:20:00:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:20:00:EventLoop 0x7fff0880d510 start looping 
+
+[INFO]2023/10/24 11:20:00:1 events happened 
+
+[INFO]2023/10/24 11:20:00:1 events happened 
+
+[INFO]2023/10/24 11:20:00:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:20:00:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:20:00:TcpServer::newConnection [127.0.0.1:6666] - new connection [127.0.0.1:6666-127.0.0.1:6666#1] from 127.0.0.1:39040 
+
+[INFO]2023/10/24 11:20:00:TcpConnection::handleClose fd=6 state=2 
+
+[INFO]2023/10/24 11:20:00:func=updateChannel => fd=6 events=0 index=1 
+
+[INFO]2023/10/24 11:20:00:TcpConnection::ctor[127.0.0.1:6666-127.0.0.1:6666#1] at fd=14
+
+[INFO]2023/10/24 11:20:00:1 events happened 
+
+[INFO]2023/10/24 11:20:00:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:20:00:TcpServer::removeConnectionInLoop [127.0.0.1:8000] - connection 127.0.0.1:8000-127.0.0.1:8000#1
+
+[INFO]2023/10/24 11:20:00:1 events happened 
+
+[INFO]2023/10/24 11:20:00:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:20:00:func=removeChannel => fd=6
+
+[INFO]2023/10/24 11:20:00:TcpConnection::dtor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=6 state=0 
+
+[INFO]2023/10/24 11:20:00:1 events happened 
+
+[INFO]2023/10/24 11:20:00:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:20:00:func=updateChannel => fd=14 events=3 index=-1 
+
+[INFO]2023/10/24 11:20:02:1 events happened 
+
+[INFO]2023/10/24 11:20:02:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:20:02:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#2] from 127.0.0.1:39358 
+
+[INFO]2023/10/24 11:20:02:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#2] at fd=14
+
+[INFO]2023/10/24 11:20:02:1 events happened 
+
+[INFO]2023/10/24 11:20:02:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:20:02:func=updateChannel => fd=14 events=3 index=-1 
+
+[INFO]2023/10/24 11:20:02:1 events happened 
+
+[INFO]2023/10/24 11:20:02:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:20:09:1 events happened 
+
+[INFO]2023/10/24 11:20:09:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:20:09:1 events happened 
+
+[INFO]2023/10/24 11:20:09:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:20:16:1 events happened 
+
+[INFO]2023/10/24 11:20:16:channel handleEvent revents:1
+
+[INFO]2023/10/24 11:20:25:1 events happened 
+
+[INFO]2023/10/24 11:20:25:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:33:57:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 16:33:57:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 16:33:57:EventLoop 0x7fc33ae17be0 start looping 
+
+[INFO]2023/10/24 16:33:57:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 16:33:57:EventLoop 0x7fc33a616be0 start looping 
+
+[INFO]2023/10/24 16:33:57:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 16:33:57:EventLoop 0x7fc339e15be0 start looping 
+
+[INFO]2023/10/24 16:33:57:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 16:33:57:EventLoop 0x7ffea3a03bf0 start looping 
+
+[INFO]2023/10/24 16:34:02:func=updateChannel => fd=4 events=3 index=-1 
+
+[INFO]2023/10/24 16:34:02:func=updateChannel => fd=9 events=3 index=-1 
+
+[INFO]2023/10/24 16:34:02:EventLoop 0x7f772d87cbe0 start looping 
+
+[INFO]2023/10/24 16:34:02:func=updateChannel => fd=11 events=3 index=-1 
+
+[INFO]2023/10/24 16:34:02:EventLoop 0x7f772d07bbe0 start looping 
+
+[INFO]2023/10/24 16:34:02:func=updateChannel => fd=13 events=3 index=-1 
+
+[INFO]2023/10/24 16:34:02:EventLoop 0x7f772c87abe0 start looping 
+
+[INFO]2023/10/24 16:34:02:func=updateChannel => fd=7 events=3 index=-1 
+
+[INFO]2023/10/24 16:34:02:1 events happened 
+
+[INFO]2023/10/24 16:34:02:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:34:02:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#1] from 127.0.0.1:50308 
+
+[INFO]2023/10/24 16:34:02:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=6
+
+[INFO]2023/10/24 16:34:02:1 events happened 
+
+[INFO]2023/10/24 16:34:02:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:34:02:func=updateChannel => fd=6 events=3 index=-1 
+
+[INFO]2023/10/24 16:34:02:1 events happened 
+
+[INFO]2023/10/24 16:34:02:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:34:02:1 events happened 
+
+[INFO]2023/10/24 16:34:02:EventLoop 0x7ffef52814d0 start looping 
+
+[INFO]2023/10/24 16:34:02:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:34:02:1 events happened 
+
+[INFO]2023/10/24 16:34:02:TcpConnection::handleClose fd=6 state=2 
+
+[INFO]2023/10/24 16:34:02:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:34:02:TcpServer::newConnection [127.0.0.1:6666] - new connection [127.0.0.1:6666-127.0.0.1:6666#1] from 127.0.0.1:49996 
+
+[INFO]2023/10/24 16:34:02:func=updateChannel => fd=6 events=0 index=1 
+
+[INFO]2023/10/24 16:34:02:1 events happened 
+
+[INFO]2023/10/24 16:34:02:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:34:02:TcpConnection::ctor[127.0.0.1:6666-127.0.0.1:6666#1] at fd=6
+
+[INFO]2023/10/24 16:34:02:TcpServer::removeConnectionInLoop [127.0.0.1:8000] - connection 127.0.0.1:8000-127.0.0.1:8000#1
+
+[INFO]2023/10/24 16:34:02:1 events happened 
+
+[INFO]2023/10/24 16:34:02:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:34:02:func=removeChannel => fd=6
+
+[INFO]2023/10/24 16:34:02:TcpConnection::dtor[127.0.0.1:8000-127.0.0.1:8000#1] at fd=6 state=0 
+
+[INFO]2023/10/24 16:34:02:1 events happened 
+
+[INFO]2023/10/24 16:34:02:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:34:02:func=updateChannel => fd=6 events=3 index=-1 
+
+[INFO]2023/10/24 16:34:08:1 events happened 
+
+[INFO]2023/10/24 16:34:08:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:34:08:TcpServer::newConnection [127.0.0.1:8000] - new connection [127.0.0.1:8000-127.0.0.1:8000#2] from 127.0.0.1:50314 
+
+[INFO]2023/10/24 16:34:08:TcpConnection::ctor[127.0.0.1:8000-127.0.0.1:8000#2] at fd=14
+
+[INFO]2023/10/24 16:34:08:1 events happened 
+
+[INFO]2023/10/24 16:34:08:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:34:08:func=updateChannel => fd=14 events=3 index=-1 
+
+[INFO]2023/10/24 16:34:08:1 events happened 
+
+[INFO]2023/10/24 16:34:08:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:34:12:1 events happened 
+
+[INFO]2023/10/24 16:34:12:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:34:12:1 events happened 
+
+[INFO]2023/10/24 16:34:12:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:34:16:1 events happened 
+
+[INFO]2023/10/24 16:34:16:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:34:16:1 events happened 
+
+[INFO]2023/10/24 16:34:16:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:34:26:1 events happened 
+
+[INFO]2023/10/24 16:34:26:channel handleEvent revents:1
+
+[INFO]2023/10/24 16:34:34:1 events happened 
+
+[INFO]2023/10/24 16:34:34:channel handleEvent revents:1
+
