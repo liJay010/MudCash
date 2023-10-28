@@ -36,6 +36,12 @@ enum EnMsgType
     BACKUP_RECV,
     BACKUP_RECV_ACK,
     BACKUP_PRE,
+
+    NEW_SLAVE2,
+    NEW_SLAVE2_RECV,
+    NEW_SLAVE_UP2,
+    NEW_SLAVE_UP2_RECV,
+    DELETE_BK,
 };
 
 

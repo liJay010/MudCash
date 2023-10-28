@@ -31,6 +31,7 @@ src/slaveserver/CMakeFiles/slaveserver.dir/slaveServer.cpp.o
  /storage4/lxj/Cplus/MudCash/src/slaveserver/slaveServer.cpp
 src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.o
  ../include/caches/KVdatabase.h
+ ../include/caches/avl.hpp
  ../include/caches/caclient.h
  ../include/caches/global.h
  ../include/caches/json.hpp
@@ -52,7 +53,10 @@ src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.o
  ../include/net/noncopyable.h
  /storage4/lxj/Cplus/MudCash/src/slaveserver/slaveService.cpp
 src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o
+ ../include/caches/KVdatabase.h
+ ../include/caches/json.hpp
  ../include/caches/slaveServer.h
+ ../include/caches/slaveService.h
  ../include/net/Acceptor.h
  ../include/net/Buffer.h
  ../include/net/Callbacks.h
@@ -61,6 +65,8 @@ src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o
  ../include/net/EventLoop.h
  ../include/net/EventLoopThreadPool.h
  ../include/net/InetAddress.h
+ ../include/net/LockQueue.h
+ ../include/net/Logger.h
  ../include/net/Socket.h
  ../include/net/TcpConnection.h
  ../include/net/TcpServer.h

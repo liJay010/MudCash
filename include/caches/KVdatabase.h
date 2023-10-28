@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <utility>
+#include <iostream>
 
 template<typename K, typename V>
 class KVdatabase
@@ -16,6 +17,7 @@ public:
     void update_KV(K,V); //更改KV，如果不在，则不更改
     int size();
     void clear();
+    void show();
     std::vector<std::pair<K,V>> get_all_data();
 private:
     std::unordered_map<K ,V> KVdata;
@@ -71,4 +73,14 @@ template<typename K, typename V>
 void KVdatabase<K,V>::clear()
 {
     KVdata.clear();
+}
+
+template<typename K, typename V>
+void KVdatabase<K,V>::show()
+{
+
+    for(auto x: KVdata)
+    {
+        std::cout << x.first << ":" << x.second<< std::endl;
+    }
 }

@@ -83,6 +83,66 @@ void coordination_Service::client_put(const TcpConnectionPtr &conn, json &js, Ti
         else conn->send(faild_ACK());
     }
 }
+
+void coordination_Service::Loss_connect_Handler(hash_Node* next,hash_Node* next_next,string ip_port)
+{
+    //next掉线，next_next是其下一个节点 参数-> next ,cli->ip_port_self,next_next
+    hash_Node* pre = nullptr;
+    root = deletehash_Node(root, next->key);
+    _fdMap.erase(ip_port);
+    //需要告知其下下一个节点的ip以及端口，讲数据发送，然后删除backup中数据
+    if(next_next)
+    {
+        
+        //向下下一个节点备份数据
+        hash_Node* sub_next= nullptr;
+        Suc(root, pre,sub_next, CRC32(next_next->ip_plus_port));
+
+        if(sub_next == nullptr) sub_next = minValue(root);
+        if(pre == nullptr) pre = maxValue(root);
+        if(sub_next == next_next)//说明就只有一个节点了
+        {
+            cout << "just one node" <<endl;
+            shared_ptr<caclient> cli_next= _fdMap[next_next->ip_plus_port];
+            json jsp;
+            jsp["type"] = BACKUP_CO; //发送连接数据
+            jsp["only_one"] = true; 
+            string sendBufp = jsp.dump();
+            cli_next->ca_send_message(sendBufp);
+        }
+        else if(pre && sub_next && sub_next != next_next && pre != next_next)
+        {
+            json jsp;
+            shared_ptr<caclient> cli_next= _fdMap[next_next->ip_plus_port];
+            if(_fdMap.find(pre->ip_plus_port) == _fdMap.end())
+            {
+                cout << "sub_next -> cli null" <<endl;
+                exit(0);
+            }
+            shared_ptr<caclient> pre_cli_next= _fdMap[pre->ip_plus_port];
+            if(_fdMap.find(sub_next->ip_plus_port) == _fdMap.end())
+            {
+                cout << "sub_next -> cli null" <<endl;
+                exit(0);
+            }
+            shared_ptr<caclient> sub_cli_next= _fdMap[sub_next->ip_plus_port];
+            jsp["type"] = BACKUP_CO; //发送连接数据
+            jsp["only_one"] = false; 
+            jsp["ip_self"] = cli_next->ip_self;
+            jsp["port_self"] = cli_next->port_self;
+            jsp["ip"] = sub_cli_next->ip_self;
+            jsp["port"] = sub_cli_next->port_self;
+            jsp["pre_ip"] = pre_cli_next->ip_self;
+            jsp["pre_port"] = pre_cli_next->port_self;
+
+            cout << ip_port << "掉线 -> 备份到下一个节点 ："<< next_next->ip_plus_port << endl;
+
+            string sendBufp = jsp.dump();
+            cli_next->ca_send_message(sendBufp);
+        }
+        
+    }
+}
 void coordination_Service::client_get(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
     if(_fdMap.empty())
@@ -124,62 +184,7 @@ void coordination_Service::client_get(const TcpConnectionPtr &conn, json &js, Ti
     }
     else//掉线了,需要备份，发送消息给下一个节点
     {
-        root = deletehash_Node(root, next->key);
-        _fdMap.erase(cli->ip_port_self);
-        //需要告知其下下一个节点的ip以及端口，讲数据发送，然后删除backup中数据
-        if(next_next)
-        {
-            
-            //向下下一个节点备份数据
-            hash_Node* sub_next= nullptr;
-            Suc(root, pre,sub_next, CRC32(next_next->ip_plus_port));
-
-            if(sub_next == nullptr) sub_next = minValue(root);
-            if(pre == nullptr) pre = maxValue(root);
-            if(sub_next == next_next)//说明就只有一个节点了
-            {
-                cout << "just one node" <<endl;
-                shared_ptr<caclient> cli_next= _fdMap[next_next->ip_plus_port];
-                json jsp;
-                jsp["type"] = BACKUP_CO; //发送连接数据
-                jsp["only_one"] = true; 
-                string sendBufp = jsp.dump();
-                cli_next->ca_send_message(sendBufp);
-            }
-            else if(pre && sub_next && sub_next != next_next && pre != next_next)
-            {
-                json jsp;
-                shared_ptr<caclient> cli_next= _fdMap[next_next->ip_plus_port];
-                if(_fdMap.find(pre->ip_plus_port) == _fdMap.end())
-                {
-                    cout << "sub_next -> cli null" <<endl;
-                    exit(0);
-                }
-                shared_ptr<caclient> pre_cli_next= _fdMap[pre->ip_plus_port];
-                if(_fdMap.find(sub_next->ip_plus_port) == _fdMap.end())
-                {
-                    cout << "sub_next -> cli null" <<endl;
-                    exit(0);
-                }
-                shared_ptr<caclient> sub_cli_next= _fdMap[sub_next->ip_plus_port];
-                jsp["type"] = BACKUP_CO; //发送连接数据
-                jsp["only_one"] = false; 
-                jsp["ip_self"] = cli_next->ip_self;
-                jsp["port_self"] = cli_next->port_self;
-                jsp["ip"] = sub_cli_next->ip_self;
-                jsp["port"] = sub_cli_next->port_self;
-                jsp["pre_ip"] = pre_cli_next->ip_self;
-                jsp["pre_port"] = pre_cli_next->port_self;
-
-                cout << cli->ip_port_self << "掉线 -> 备份到下一个节点 ："<< next_next->ip_plus_port << endl;
-                cout << "pre ip : "<< pre_cli_next->ip_self << " port :" << pre_cli_next->port_self << endl;
-                cout << "cur ip : "<< cli_next->ip_self << " port :" << cli_next->port_self << endl;
-                cout << "next ip : "<< sub_cli_next->ip_self << " port :" << sub_cli_next->port_self << endl;
-                string sendBufp = jsp.dump();
-                cli_next->ca_send_message(sendBufp);
-            }
-            
-        }
+        Loss_connect_Handler(next,next_next,cli->ip_port_self);
     }
 
     if(next_next == next || next_next == nullptr)
@@ -226,20 +231,106 @@ void coordination_Service::slave_ACK(const TcpConnectionPtr &conn, json &js, Tim
     cli->ip_port_self = name;
     cli->ip_self = ip;
     cli->port_self = stoi(port);
-    root = insert(root, CRC32(name), name);
-    inorder(root); //打印哈希环
 
     /*
     插入B
     此处需要查询节点-若之前无节点，直接添加，
-    若之前有一个节点A：
-        遍历A，将所有节点选择出属于B的节点。将B节点作为backup。选择出属于A的节点。
-        将A，B节点分别发送给B，A作为B的backup
-
-    若有两个节点及以上A -> pre C->next：
-        遍历C节点，选出属于B的节点，将B节点作为C的新的backup。将原来的backup作为B的Backup
         */
+    //首先检测节点是否可以连接
+    hash_Node* pre = nullptr;
+    hash_Node* sub_next= nullptr;
+    hash_Node* sub_next_next= nullptr;
+    hash_Node* sub_next_next_next= nullptr;
 
+    shared_ptr<caclient> cli_next;
+    shared_ptr<caclient> cli_next_next;
+    shared_ptr<caclient> cli_sub_next_next;
+
+
+    if(_fdMap.size() >= 1)
+    {
+        Suc(root, pre,sub_next, CRC32(name));
+        if(sub_next == nullptr) sub_next = minValue(root);
+        if(!sub_next) cout << "error1" <<endl;
+
+        Suc(root, pre,sub_next_next, CRC32(sub_next->ip_plus_port));
+        if(sub_next_next == nullptr) sub_next_next = minValue(root);
+        if(!sub_next_next) cout << "error2" <<endl;
+
+        if(_fdMap.size() > 1)
+        {
+            Suc(root, pre,sub_next_next_next, CRC32(sub_next_next->ip_plus_port));
+            if(sub_next_next_next == nullptr) sub_next_next_next = minValue(root);
+            if(!sub_next_next_next) cout << "error3" <<endl;
+            cli_sub_next_next = _fdMap[sub_next_next_next->ip_plus_port];
+            
+        }
+        
+        cli_next = _fdMap[sub_next->ip_plus_port];
+        cli_next_next = _fdMap[sub_next_next->ip_plus_port];
+
+        cout << "查看是否能连接" << sub_next->ip_plus_port << " " << sub_next_next->ip_plus_port <<endl;
+        json jj;
+        jj["type"] = CLIENT_GET; //发送连接数据
+        jj["key"] = "1";
+        string s = jj.dump();
+        cli_next->ca_send_message(s);
+        RECV rec =  cli_next->ca_receive_message();
+        cout << "查看是否能连接-fisrt" <<endl;
+        RECV recnext;
+        if(_fdMap.size() > 1)
+        {
+            cli_next_next->ca_send_message(s);
+            RECV recnext =  cli_next_next->ca_receive_message();
+        }
+        
+        cout << "查看是否能连接 - 成功" <<endl;
+        if(rec.cnt == 0)
+        {
+            Loss_connect_Handler(sub_next,sub_next_next,cli_next->ip_port_self);
+        }
+        if(_fdMap.size() > 1 && recnext.cnt == 0)
+        {
+            Loss_connect_Handler(sub_next_next,sub_next_next_next,cli_sub_next_next->ip_port_self);
+        }
+    }
+
+
+    if(_fdMap.size() == 1)
+    {
+        /*hash_Node* pre = nullptr;
+        hash_Node* sub_next= nullptr;
+        Suc(root, pre,sub_next, CRC32(name));
+        if(sub_next == nullptr) sub_next = minValue(root);
+        if(!sub_next) cout << "error" <<endl;
+        
+        shared_ptr<caclient> cli_next= _fdMap[sub_next->ip_plus_port];*/
+        
+
+        json jsp;
+        jsp["type"] = NEW_SLAVE2; //发送连接数据
+        jsp["ip"] = ip; 
+        jsp["port"] = stoi(port); 
+        jsp["key"] = CRC32(name); 
+
+        string sendBufp = jsp.dump();
+        cli_next->ca_send_message(sendBufp);
+    }
+    else if(_fdMap.size() > 1)
+    {
+        json jsp;
+        jsp["type"] = NEW_SLAVE_UP2; //发送连接数据
+        jsp["ip"] = ip; 
+        jsp["port"] = stoi(port); 
+        jsp["next_ip"] = cli_next_next->ip_self; 
+        jsp["next_port"] = cli_next_next->port_self; 
+        jsp["key"] = CRC32(name); 
+        string sendBufp = jsp.dump();
+        cli_next->ca_send_message(sendBufp);
+    }
+
+    root = insert(root, CRC32(name), name);
+    inorder(root); //打印哈希环
     _fdMap[name] = cli;
     json res;
     res["type"] = SLAVE_SEVER_CONNECT_ACK; //发送连接数据

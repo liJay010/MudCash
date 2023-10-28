@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include "TcpServer.h"
-
+#include "slaveService.h"
 
 class SlaveServer
 {
@@ -29,6 +29,7 @@ private:
     EventLoop *loop_;
     TcpServer server_;
 
+    slaveService slaveservice;
     std::string node_name; //ip:port
     std::string ip; //对端ip
     int port;//对端port

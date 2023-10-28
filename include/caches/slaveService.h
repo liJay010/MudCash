@@ -19,9 +19,8 @@ using MsgHandler = std::function<void(const TcpConnectionPtr &conn, json &js, Ti
 class slaveService
 {
 public:
-    // 获取单例对象的接口函数
-    static slaveService *instance();
     // 处理业务
+    slaveService();
     void Slave_GET(const TcpConnectionPtr &conn, json &js, Timestamp time);
     void Slave_PUT(const TcpConnectionPtr &conn, json &js, Timestamp time);
     void Slave_UPDATE(const TcpConnectionPtr &conn, json &js, Timestamp time);
@@ -29,6 +28,10 @@ public:
     void Slave_BACKUP(const TcpConnectionPtr &conn, json &js, Timestamp time);
     void Slave_BACKUP_RECV(const TcpConnectionPtr &conn, json &js, Timestamp time);
     void Slave_BACKUP_PRE(const TcpConnectionPtr &conn, json &js, Timestamp time);
+    void Slave_NEW_SLAVE2(const TcpConnectionPtr &conn, json &js, Timestamp time);
+    void Slave_NEW_SLAVE2_RECV(const TcpConnectionPtr &conn, json &js, Timestamp time);
+    void Slave_NEW_SLAVE_UP2(const TcpConnectionPtr &conn, json &js, Timestamp time);
+    void Slave_DELETE_BK(const TcpConnectionPtr &conn, json &js, Timestamp time);
     // 处理客户端异常退出
     void clientCloseException(const TcpConnectionPtr &conn){};
     // 服务器异常，业务重置方法
@@ -37,7 +40,6 @@ public:
     MsgHandler getHandler(int msgid);
 
 private:
-    slaveService();
     mutex _connMutex;
     unordered_map<int, MsgHandler> _msgHandlerMap;
     KVdatabase<string,string> backup;

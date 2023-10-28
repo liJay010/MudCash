@@ -30,6 +30,7 @@ src/slaveserver/CMakeFiles/slaveserver.dir/slaveServer.cpp.o: ../include/net/non
 src/slaveserver/CMakeFiles/slaveserver.dir/slaveServer.cpp.o: ../src/slaveserver/slaveServer.cpp
 
 src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.o: ../include/caches/KVdatabase.h
+src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.o: ../include/caches/avl.hpp
 src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.o: ../include/caches/caclient.h
 src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.o: ../include/caches/global.h
 src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.o: ../include/caches/json.hpp
@@ -51,7 +52,10 @@ src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.o: ../include/net/Ti
 src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.o: ../include/net/noncopyable.h
 src/slaveserver/CMakeFiles/slaveserver.dir/slaveService.cpp.o: ../src/slaveserver/slaveService.cpp
 
+src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: ../include/caches/KVdatabase.h
+src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: ../include/caches/json.hpp
 src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: ../include/caches/slaveServer.h
+src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: ../include/caches/slaveService.h
 src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: ../include/net/Acceptor.h
 src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: ../include/net/Buffer.h
 src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: ../include/net/Callbacks.h
@@ -60,6 +64,8 @@ src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: ../include/ne
 src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: ../include/net/EventLoop.h
 src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: ../include/net/EventLoopThreadPool.h
 src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: ../include/net/InetAddress.h
+src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: ../include/net/LockQueue.h
+src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: ../include/net/Logger.h
 src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: ../include/net/Socket.h
 src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: ../include/net/TcpConnection.h
 src/slaveserver/CMakeFiles/slaveserver.dir/test_slave_server.cc.o: ../include/net/TcpServer.h

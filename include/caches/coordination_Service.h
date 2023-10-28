@@ -32,6 +32,7 @@ public:
 
     // 处理客户端异常退出
     void clientCloseException(const TcpConnectionPtr &conn){};
+    void Loss_connect_Handler(hash_Node* next,hash_Node* next_next,string ip_port);
     // 服务器异常，业务重置方法
     void reset(){};
     // 获取消息对应的处理器
