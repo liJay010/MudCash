@@ -287,7 +287,10 @@ void slaveService::Slave_NEW_SLAVE_UP2(const TcpConnectionPtr &conn, json &js, T
     json jsp;
     jsp["type"] = NEW_SLAVE2_RECV;
     
-    jsp["sdata"] = backup.get_all_data();;// 作为前一个节点的 backup
+    jsp["sdata"] = backup.get_all_data();// 作为前一个节点的 backup
+    cout << "这个作为前一个节点的bk ---------------" <<endl;
+    for(auto x : backup.get_all_data()) cout << x.first << " ";
+    cout << "这个作为前一个节点的bk -------------" <<endl;
     backup.clear();
     vector<pair<string,string>> mydata = self_data.get_all_data();
     vector<pair<string,string>> bkdata;
@@ -301,7 +304,10 @@ void slaveService::Slave_NEW_SLAVE_UP2(const TcpConnectionPtr &conn, json &js, T
         }
     }
 
-    
+    cout << "这个作为前一个节点的data ---------------" <<endl;
+    for(auto x : bkdata) cout << x.first << " ";
+    cout << "这个作为前一个节点的data -------------" <<endl;
+
     jsp["back_up"] = bkdata; // 作为前一个节点的selfdata
     string sendBuf = jsp.dump();
     cli->ca_send_message(sendBuf);

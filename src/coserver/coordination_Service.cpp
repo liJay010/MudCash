@@ -232,6 +232,26 @@ void coordination_Service::slave_ACK(const TcpConnectionPtr &conn, json &js, Tim
     cli->ip_self = ip;
     cli->port_self = stoi(port);
 
+    //遍历一下有没有掉线的
+    /*if(_fdMap.size() > 0)
+    {
+        json jj;
+        jj["type"] = CLIENT_GET; //发送连接数据
+        jj["key"] = "1";
+        string s = jj.dump();
+        for(auto x: _fdMap)
+        {
+            x.second->ca_send_message(s);
+            RECV rec =  x.second->ca_receive_message();
+            cout << "查看是否能连接-fisrt" <<endl;
+            RECV recnext;
+            if(rec.cnt == 0)
+            {
+                Loss_connect_Handler(sub_next,sub_next_next,cli_next->ip_port_self);
+            }
+        }
+    }*/
+
     /*
     插入B
     此处需要查询节点-若之前无节点，直接添加，
