@@ -32,7 +32,7 @@ void slaveService::Slave_GET(const TcpConnectionPtr &conn, json &js, Timestamp t
     if(backup.check_K(key)) value = backup.find_K(key);
 
     json res;
-    res["type"] = SLAVE_SEVER_GET_ACK; //发送连接数据
+    //res["type"] = SLAVE_SEVER_GET_ACK; //发送连接数据
     if(find)
     {
         res["value"] = value;
@@ -54,7 +54,7 @@ void slaveService::Slave_PUT(const TcpConnectionPtr &conn, json &js, Timestamp t
     if(bk) backup.insert_KV(key,value); //备份key
     else self_data.insert_KV(key,value);
     json res;
-    res["type"] = SLAVE_SEVER_PUT_ACK; //发送连接数据
+    //res["type"] = SLAVE_SEVER_PUT_ACK; //发送连接数据
     res["code"] = 0;
     string sendBuf = res.dump();
     conn->send(sendBuf);
@@ -67,7 +67,7 @@ void slaveService::Slave_UPDATE(const TcpConnectionPtr &conn, json &js, Timestam
     if( self_data.check_K(key)) self_data.update_KV(key,value);
     if(backup.check_K(key)) backup.update_KV(key,value);
     json res;
-    res["type"] = SLAVE_SEVER_UPDATE_ACK; //发送连接数据
+    //res["type"] = SLAVE_SEVER_UPDATE_ACK; //发送连接数据
     res["code"] = 0;
     string sendBuf = res.dump();
     conn->send(sendBuf);
@@ -79,7 +79,7 @@ void slaveService::Slave_DELETE(const TcpConnectionPtr &conn, json &js, Timestam
     if( self_data.check_K(key)) self_data.delete_K(key);
     if( backup.check_K(key)) backup.delete_K(key);
     json res;
-    res["type"] = SLAVE_SEVER_DELETE_ACK; //发送连接数据
+    //res["type"] = SLAVE_SEVER_DELETE_ACK; //发送连接数据
     res["code"] = 0;
     string sendBuf = res.dump();
     conn->send(sendBuf);

@@ -4,12 +4,12 @@
 #include <vector>
 #include <utility>
 #include <iostream>
-
+#include "SkipList.h"
 template<typename K, typename V>
 class KVdatabase
 {
 public:
-    KVdatabase(){};
+    KVdatabase();
     bool check_K(K); //确保是否在数据库中
     V find_K(K); //查询K 对应的V值
     void insert_KV(K,V); //插入K,V
@@ -21,66 +21,64 @@ public:
     std::vector<std::pair<K,V>> get_all_data();
 private:
     std::unordered_map<K ,V> KVdata;
+    SkipList<std::string,std::string> skipList;
 };
+
+template<typename K, typename V>
+KVdatabase<K,V>::KVdatabase():skipList(18)
+{
+
+}
 
 template<typename K, typename V>
 bool KVdatabase<K,V>::check_K(K key)
 {
-    return KVdata.find(key) != KVdata.end();
+    return skipList.find_element(key);
 }
 
 template<typename K, typename V>
 V KVdatabase<K,V>::find_K(K key)
 {
-    return KVdata[key];
+    return skipList.search_element(key);
 }
 
 template<typename K, typename V>
 void KVdatabase<K,V>::insert_KV(K key,V value)
 {
     
-    KVdata.insert({key,value});
+    skipList.insert_element(key,value);
     //cout << key << value <<endl;
 }
 
 template<typename K, typename V>
 void KVdatabase<K,V>::delete_K(K key)
 {
-    KVdata.erase(key);
+    skipList.delete_element(key);
 }
 
 template<typename K, typename V>
 void KVdatabase<K,V>::update_KV(K key,V value)
 {
-    if(check_K(key)) KVdata[key] = value;
+    skipList.update_element(key,value);
 }
 template<typename K, typename V>
 int KVdatabase<K,V>::size()
 {
-    return KVdata.size();
+    return skipList.size();
 }
 template<typename K, typename V>
 std::vector<std::pair<K,V>> KVdatabase<K,V>::get_all_data()
 {
-    std::vector<std::pair<K,V>> temp;
-    for(auto x: KVdata)
-    {
-        temp.push_back(x);
-    }
-    return temp;
+    return skipList.get_all_data();
 }
 template<typename K, typename V>
 void KVdatabase<K,V>::clear()
 {
-    KVdata.clear();
+    skipList.clear();
 }
 
 template<typename K, typename V>
 void KVdatabase<K,V>::show()
 {
-
-    for(auto x: KVdata)
-    {
-        std::cout << x.first << ":" << x.second<< std::endl;
-    }
+    skipList.display_list();
 }

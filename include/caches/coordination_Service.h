@@ -5,12 +5,12 @@
 #include <functional>
 #include <unordered_map>
 #include <mutex>
-#include "consistent_hash.h"
 using namespace std;
 #include "json.hpp"
 #include "caclient.h"
 #include <memory>
 #include "avl.hpp"
+#include "lru_cache.hpp"
 using json = nlohmann::json;
 
 // 表示处理消息的事件回调方法类型
@@ -43,6 +43,6 @@ private:
     mutex _connMutex;
     unordered_map<int, MsgHandler> _msgHandlerMap;
     unordered_map<string,shared_ptr<caclient>> _fdMap;
-    
+    lrucache cache;
     hash_Node *root;
 };

@@ -7,17 +7,14 @@ src/coserver/CMakeFiles/coserver.dir/__/client/caclient.cpp.o
  ../include/caches/json.hpp
  /storage4/lxj/Cplus/MudCash/src/client/caclient.cpp
 src/coserver/CMakeFiles/coserver.dir/__/hash/consistent_hash.cpp.o
- ../include/caches/SkipList.h
- ../include/caches/consistent_hash.h
  /storage4/lxj/Cplus/MudCash/src/hash/consistent_hash.cpp
 src/coserver/CMakeFiles/coserver.dir/coordination_Service.cpp.o
- ../include/caches/SkipList.h
  ../include/caches/avl.hpp
  ../include/caches/caclient.h
- ../include/caches/consistent_hash.h
  ../include/caches/coordination_Service.h
  ../include/caches/global.h
  ../include/caches/json.hpp
+ ../include/caches/lru_cache.hpp
  ../include/net/Acceptor.h
  ../include/net/Buffer.h
  ../include/net/Callbacks.h
@@ -35,13 +32,12 @@ src/coserver/CMakeFiles/coserver.dir/coordination_Service.cpp.o
  ../include/net/noncopyable.h
  /storage4/lxj/Cplus/MudCash/src/coserver/coordination_Service.cpp
 src/coserver/CMakeFiles/coserver.dir/coordination_server.cpp.o
- ../include/caches/SkipList.h
  ../include/caches/avl.hpp
  ../include/caches/caclient.h
- ../include/caches/consistent_hash.h
  ../include/caches/coordination_Service.h
  ../include/caches/coordination_server.h
  ../include/caches/json.hpp
+ ../include/caches/lru_cache.hpp
  ../include/net/Acceptor.h
  ../include/net/Buffer.h
  ../include/net/Callbacks.h

@@ -8,6 +8,7 @@ src/slaveserver/CMakeFiles/slaveserver1.dir/__/client/caclient.cpp.o
  /storage4/lxj/Cplus/MudCash/src/client/caclient.cpp
 src/slaveserver/CMakeFiles/slaveserver1.dir/slaveServer.cpp.o
  ../include/caches/KVdatabase.h
+ ../include/caches/SkipList.h
  ../include/caches/caclient.h
  ../include/caches/global.h
  ../include/caches/json.hpp
@@ -31,6 +32,7 @@ src/slaveserver/CMakeFiles/slaveserver1.dir/slaveServer.cpp.o
  /storage4/lxj/Cplus/MudCash/src/slaveserver/slaveServer.cpp
 src/slaveserver/CMakeFiles/slaveserver1.dir/slaveService.cpp.o
  ../include/caches/KVdatabase.h
+ ../include/caches/SkipList.h
  ../include/caches/avl.hpp
  ../include/caches/caclient.h
  ../include/caches/global.h
@@ -54,6 +56,7 @@ src/slaveserver/CMakeFiles/slaveserver1.dir/slaveService.cpp.o
  /storage4/lxj/Cplus/MudCash/src/slaveserver/slaveService.cpp
 src/slaveserver/CMakeFiles/slaveserver1.dir/test_slave_server1.cc.o
  ../include/caches/KVdatabase.h
+ ../include/caches/SkipList.h
  ../include/caches/json.hpp
  ../include/caches/slaveServer.h
  ../include/caches/slaveService.h

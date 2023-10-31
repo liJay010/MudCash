@@ -6,28 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../include/caches/SkipList.h
-iostream
--
-cstdlib
--
-cmath
--
-cstring
--
-mutex
--
-fstream
--
-cstdlib
--
-memory
--
-vector
--
-utility
--
-
 ../include/caches/avl.hpp
 string
 -
@@ -37,20 +15,6 @@ iostream
 ../include/caches/caclient.h
 string
 -
-
-../include/caches/consistent_hash.h
-string
-../include/caches/string
-SkipList.h
-../include/caches/SkipList.h
-unordered_map
-../include/caches/unordered_map
-unordered_set
-../include/caches/unordered_set
-vector
-../include/caches/vector
-iostream
-../include/caches/iostream
 
 ../include/caches/coordination_Service.h
 string
@@ -65,8 +29,6 @@ unordered_map
 -
 mutex
 -
-consistent_hash.h
-../include/caches/consistent_hash.h
 json.hpp
 ../include/caches/json.hpp
 caclient.h
@@ -75,6 +37,8 @@ memory
 -
 avl.hpp
 ../include/caches/avl.hpp
+lru_cache.hpp
+../include/caches/lru_cache.hpp
 
 ../include/caches/coordination_server.h
 string
@@ -414,6 +378,14 @@ limits
 type_traits
 -
 
+../include/caches/lru_cache.hpp
+iostream
+-
+string
+-
+unordered_map
+-
+
 ../include/net/Acceptor.h
 noncopyable.h
 ../include/net/noncopyable.h
@@ -635,6 +607,4 @@ coordination_server.h
 /storage4/lxj/Cplus/MudCash/src/coserver/coordination_server.h
 
 /storage4/lxj/Cplus/MudCash/src/hash/consistent_hash.cpp
-consistent_hash.h
-/storage4/lxj/Cplus/MudCash/src/hash/consistent_hash.h
 

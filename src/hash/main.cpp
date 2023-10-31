@@ -1,7 +1,7 @@
 #include "avl.hpp"
 #include <iostream>
 #include <string>
-#include "KVdatabase.h"
+#include "SkipList.h"
 using namespace std;
 /*
 avl_tree 类：
@@ -14,18 +14,25 @@ inorder(hash_Node *root)
 */
 int main()
 {
-    KVdatabase<string,string> db;
-    hash_Node *root=NULL;
-    string s("112");
-    root = insert(root, CRC32(s), s);
-    root = insert(root, CRC32(s + "1"), s+ "1");
-    root = insert(root, CRC32(s + "111"), s+ "111");
-    root = insert(root, CRC32(s + "12"), s+ "12");
-    hash_Node* p;
-    hash_Node* n;
-    Suc(root, p,n, CRC32("112")) ;
-    inorder(root);
-    cout << p->key << " " << n->key <<endl;
+    SkipList<string,string> skip(18);
+    skip.insert_element("a","b");
+    skip.insert_element("b","ff");
+    skip.insert_element("c","s");
+    skip.insert_element("d","s");
+    skip.update_element("d","54454154156");
+
+    skip.display_list();
+    cout << "size " << skip.size();
+    skip.delete_element("d");
+    skip.clear();
+    cout << "size " << skip.size();
+    skip.display_list();
+
+    std::vector<std::pair<std::string,std::string>> res = skip.get_all_data();
+    for(auto x : res)
+    {
+        cout << x.first << " " << x.second <<endl;
+    }
     
     return 0;
 }

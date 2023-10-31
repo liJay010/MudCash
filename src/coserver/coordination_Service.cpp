@@ -11,8 +11,7 @@ string faild_ACK()
 {
     //请求失败
     json jsr;
-    jsr["type"] = SLAVE_SEVER_PUT_ACK; //发送连接数据
-    jsr["code"] = MESSAGE_FALL; //发送连接数据
+    jsr["code"] = -1; //发送连接数据
     return  jsr.dump();
 } 
 // 获取单例对象的接口函数
@@ -33,13 +32,16 @@ void coordination_Service::clientACK(const TcpConnectionPtr &conn, json &js, Tim
 }
 void coordination_Service::client_put(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
+    string key = js["key"].get<string>();
+    string value = js["value"].get<string>();
+    cache.put_in_cache(key,value);
+
     if(_fdMap.empty())
     {
         conn->send(faild_ACK());
         return;
     }
 
-    string key = js["key"].get<string>();
 
     hash_Node* pre = nullptr;
     hash_Node* next = nullptr;//使用这个
@@ -145,12 +147,24 @@ void coordination_Service::Loss_connect_Handler(hash_Node* next,hash_Node* next_
 }
 void coordination_Service::client_get(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
+    string key = js["key"].get<string>();
+    string value = cache.get_from_cache(key);
+    //cache有值
+    if(value.size() > 0) 
+    {
+        json res;
+        res["value"] = value;
+        res["code"] = 0;
+        string sendBuf = res.dump();
+        conn->send(sendBuf);
+        return;
+    }
+
     if(_fdMap.empty())
     {
         conn->send(faild_ACK());
         return;
     }
-    string key = js["key"].get<string>();
     hash_Node* pre = nullptr;
     hash_Node* next = nullptr;//使用这个
     hash_Node* next_next= nullptr;
@@ -211,10 +225,15 @@ void coordination_Service::client_get(const TcpConnectionPtr &conn, json &js, Ti
 }
 void coordination_Service::client_delete(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
+    string key = js["key"].get<string>();
+    cache.delete_from_cache(key);
     client_get(conn, js, time);
 }
 void coordination_Service::client_update(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
+    string key = js["key"].get<string>();
+    string value = js["value"].get<string>();
+    cache.put_in_cache(key,value);
     client_get(conn, js, time);
 }
 
@@ -374,7 +393,7 @@ MsgHandler coordination_Service::getHandler(int msgid)
         return _msgHandlerMap[msgid];
     }
 }
-coordination_Service::coordination_Service():root(nullptr)
+coordination_Service::coordination_Service():root(nullptr),cache(3)
 {
 
     // 用户基本业务管理相关事件处理回调注册

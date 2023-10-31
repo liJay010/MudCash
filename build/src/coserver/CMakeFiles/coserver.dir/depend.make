@@ -6,17 +6,14 @@ src/coserver/CMakeFiles/coserver.dir/__/client/caclient.cpp.o: ../include/caches
 src/coserver/CMakeFiles/coserver.dir/__/client/caclient.cpp.o: ../include/caches/json.hpp
 src/coserver/CMakeFiles/coserver.dir/__/client/caclient.cpp.o: ../src/client/caclient.cpp
 
-src/coserver/CMakeFiles/coserver.dir/__/hash/consistent_hash.cpp.o: ../include/caches/SkipList.h
-src/coserver/CMakeFiles/coserver.dir/__/hash/consistent_hash.cpp.o: ../include/caches/consistent_hash.h
 src/coserver/CMakeFiles/coserver.dir/__/hash/consistent_hash.cpp.o: ../src/hash/consistent_hash.cpp
 
-src/coserver/CMakeFiles/coserver.dir/coordination_Service.cpp.o: ../include/caches/SkipList.h
 src/coserver/CMakeFiles/coserver.dir/coordination_Service.cpp.o: ../include/caches/avl.hpp
 src/coserver/CMakeFiles/coserver.dir/coordination_Service.cpp.o: ../include/caches/caclient.h
-src/coserver/CMakeFiles/coserver.dir/coordination_Service.cpp.o: ../include/caches/consistent_hash.h
 src/coserver/CMakeFiles/coserver.dir/coordination_Service.cpp.o: ../include/caches/coordination_Service.h
 src/coserver/CMakeFiles/coserver.dir/coordination_Service.cpp.o: ../include/caches/global.h
 src/coserver/CMakeFiles/coserver.dir/coordination_Service.cpp.o: ../include/caches/json.hpp
+src/coserver/CMakeFiles/coserver.dir/coordination_Service.cpp.o: ../include/caches/lru_cache.hpp
 src/coserver/CMakeFiles/coserver.dir/coordination_Service.cpp.o: ../include/net/Acceptor.h
 src/coserver/CMakeFiles/coserver.dir/coordination_Service.cpp.o: ../include/net/Buffer.h
 src/coserver/CMakeFiles/coserver.dir/coordination_Service.cpp.o: ../include/net/Callbacks.h
@@ -34,13 +31,12 @@ src/coserver/CMakeFiles/coserver.dir/coordination_Service.cpp.o: ../include/net/
 src/coserver/CMakeFiles/coserver.dir/coordination_Service.cpp.o: ../include/net/noncopyable.h
 src/coserver/CMakeFiles/coserver.dir/coordination_Service.cpp.o: ../src/coserver/coordination_Service.cpp
 
-src/coserver/CMakeFiles/coserver.dir/coordination_server.cpp.o: ../include/caches/SkipList.h
 src/coserver/CMakeFiles/coserver.dir/coordination_server.cpp.o: ../include/caches/avl.hpp
 src/coserver/CMakeFiles/coserver.dir/coordination_server.cpp.o: ../include/caches/caclient.h
-src/coserver/CMakeFiles/coserver.dir/coordination_server.cpp.o: ../include/caches/consistent_hash.h
 src/coserver/CMakeFiles/coserver.dir/coordination_server.cpp.o: ../include/caches/coordination_Service.h
 src/coserver/CMakeFiles/coserver.dir/coordination_server.cpp.o: ../include/caches/coordination_server.h
 src/coserver/CMakeFiles/coserver.dir/coordination_server.cpp.o: ../include/caches/json.hpp
+src/coserver/CMakeFiles/coserver.dir/coordination_server.cpp.o: ../include/caches/lru_cache.hpp
 src/coserver/CMakeFiles/coserver.dir/coordination_server.cpp.o: ../include/net/Acceptor.h
 src/coserver/CMakeFiles/coserver.dir/coordination_server.cpp.o: ../include/net/Buffer.h
 src/coserver/CMakeFiles/coserver.dir/coordination_server.cpp.o: ../include/net/Callbacks.h
