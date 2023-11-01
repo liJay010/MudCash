@@ -1,1 +1,0 @@
-/usr/bin/c++   -g --std=c++14 -fPIC  -rdynamic CMakeFiles/slaveserver2.dir/slaveServer.cpp.o CMakeFiles/slaveserver2.dir/slaveService.cpp.o CMakeFiles/slaveserver2.dir/__/client/caclient.cpp.o CMakeFiles/slaveserver2.dir/test_slave_server2.cc.o  -o ../../../bin/slaveserver2  -L/storage4/lxj/Cplus/MudCash/lib -Wl,-rpath,/storage4/lxj/Cplus/MudCash/lib -lnet -lpthread 

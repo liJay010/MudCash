@@ -1,1 +1,0 @@
-/usr/bin/c++   -g --std=c++14 -fPIC  -rdynamic CMakeFiles/avl.dir/main.cpp.o  -o ../../../bin/avl  -L/storage4/lxj/Cplus/MudCash/lib 
