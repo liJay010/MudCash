@@ -344,7 +344,13 @@ void slaveService::Slave_DELETE_BK(const TcpConnectionPtr &conn, json &js, Times
     cout << "backup data" <<endl;
     backup.show();
 }
-
+void slaveService::co_HEART_PKG(const TcpConnectionPtr &conn, json &js, Timestamp time)
+{
+    json jsr;
+    jsr["code"] = 0;
+    string sendBuf = jsr.dump();
+    conn->send(sendBuf);
+}
 slaveService::slaveService()
 {
     // 用户基本业务管理相关事件处理回调注册
@@ -360,6 +366,6 @@ slaveService::slaveService()
 
     _msgHandlerMap.insert({NEW_SLAVE_UP2, std::bind(&slaveService::Slave_NEW_SLAVE_UP2, this, _1, _2, _3)});
     _msgHandlerMap.insert({DELETE_BK, std::bind(&slaveService::Slave_DELETE_BK, this, _1, _2, _3)});
-
+    _msgHandlerMap.insert({HEART_PKG, std::bind(&slaveService::co_HEART_PKG, this, _1, _2, _3)});
 
 }

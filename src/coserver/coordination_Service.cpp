@@ -3,6 +3,7 @@
 #include "caclient.h"
 #include <memory>
 #include <iostream>
+#include <thread>
 #include "Logger.h"
 using namespace std;
 using namespace placeholders;
@@ -118,13 +119,13 @@ void coordination_Service::Loss_connect_Handler(hash_Node* next,hash_Node* next_
             shared_ptr<caclient> cli_next= _fdMap[next_next->ip_plus_port];
             if(_fdMap.find(pre->ip_plus_port) == _fdMap.end())
             {
-                cout << "sub_next -> cli null" <<endl;
+                cout << "sub_next -> cli null1" <<endl;
                 exit(0);
             }
             shared_ptr<caclient> pre_cli_next= _fdMap[pre->ip_plus_port];
             if(_fdMap.find(sub_next->ip_plus_port) == _fdMap.end())
             {
-                cout << "sub_next -> cli null" <<endl;
+                cout << "sub_next -> cli null2" <<endl;
                 exit(0);
             }
             shared_ptr<caclient> sub_cli_next= _fdMap[sub_next->ip_plus_port];
@@ -393,6 +394,38 @@ MsgHandler coordination_Service::getHandler(int msgid)
         return _msgHandlerMap[msgid];
     }
 }
+
+//每格 30 s发送心跳包，判断是否断联，断联则处理
+void coordination_Service::Heart_package()
+{
+    sleep(30);
+    for(auto x: _fdMap)
+    {
+        string name = x.first;
+        shared_ptr<caclient> cli = x.second;
+        json jsp;
+        jsp["type"] = HEART_PKG;
+        string sendBuf = jsp.dump();
+        cli->ca_send_message(sendBuf);
+        RECV res = cli->ca_receive_message();
+
+        if(res.cnt == 0) 
+        {
+            cout << name << " 断开连接，开始备份"<<endl;
+            hash_Node* pre = nullptr;
+            hash_Node* next = nullptr;//使用这个
+            Suc(root, pre,next, CRC32(cli->ip_port_self) + 1);
+            if(next == nullptr) next = minValue(root);
+            cout << pre->ip_plus_port << "   断开，开始备份"<<endl;
+            if(next == nullptr)
+            {
+                cout <<_fdMap.size() << " no slave server !"<<endl;
+                continue;
+            }
+            Loss_connect_Handler(pre,next,cli->ip_port_self);
+        }
+    }
+}
 coordination_Service::coordination_Service():root(nullptr),cache(3)
 {
 
@@ -405,5 +438,8 @@ coordination_Service::coordination_Service():root(nullptr),cache(3)
 
     _msgHandlerMap.insert({SLAVE_SEVER_CONNECT, std::bind(&coordination_Service::slave_ACK, this, _1, _2, _3)});
     
+    //创建一个线程，向 slave server 发送心跳包消息，如果没有回复，就说明断联了，删除该节点
+    std::thread  the(std::bind(&coordination_Service::Heart_package,this));
+    the.detach();
 }
 

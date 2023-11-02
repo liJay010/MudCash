@@ -32,6 +32,7 @@ public:
     void Slave_NEW_SLAVE2_RECV(const TcpConnectionPtr &conn, json &js, Timestamp time);
     void Slave_NEW_SLAVE_UP2(const TcpConnectionPtr &conn, json &js, Timestamp time);
     void Slave_DELETE_BK(const TcpConnectionPtr &conn, json &js, Timestamp time);
+    void co_HEART_PKG(const TcpConnectionPtr &conn, json &js, Timestamp time);
     // 处理客户端异常退出
     void clientCloseException(const TcpConnectionPtr &conn){};
     // 服务器异常，业务重置方法

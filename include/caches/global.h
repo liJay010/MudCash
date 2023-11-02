@@ -31,6 +31,8 @@ enum EnMsgType
     NEW_SLAVE_UP2_RECV,
     DELETE_BK,
 
+    //心跳包
+    HEART_PKG,
     
 };
 
