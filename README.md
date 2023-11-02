@@ -30,11 +30,16 @@ make
 ./coserver
 ```
 
-2.运行slaveServer -- 一个或多个，服务存储节点，通过一致性哈希算法将数据映射到各个存储节点中。可以动态加入或者删除
+2.运行slaveServer -- 一个或多个，服务存储节点，通过一致性哈希算法将数据映射到各个存储节点中。可以动态加入或者删除。  
+
+
+参数 :  
+
+./slaveserver coserverIP coserverPort slaveserverIP slaverserverPort
 
 ```sh
-./slaveServer
-./slaveServer1
+./slaveserver 127.0.0.1 8000 127.0.0.1 6666
+./slaveserver 127.0.0.1 8000 127.0.0.1 6667
 ```
 
 3.运行客户端 cacelient
@@ -56,7 +61,7 @@ make
 
 ​		client ， coserver（一个），slaveServer（一个或多个）
 
-### **client **
+### client 
 
 ​		客户端，用于向coserver发送增删改查的请求，并接受coserver的返回数据。
 
@@ -64,11 +69,11 @@ make
 
 ​		中心调度服务器。作为服务器用于监听客户端的请求，以及作为客户端向slaveServer发送增删改查的请求。当有slaveServer连接时候，slaveServer作为客户端主动向coserver发送连接请求。coserver将接受的slaveServer的ip+端口注册到哈希环上，并保存客户端连接。若有客户端用户的查询数据，利用一致性哈希算法计算，找到哈希环上对应的客户端连接，向对应的slaveServer发送请求数据。并使用LRU算法进行缓存，下次若有请求则直接返回。做put节点放置时候，需要利用下一个节点进行备份，同时put到当前节点和下一个节点中。若访问的当前节点挂掉，则会访问下一个节点（缓存的数据）并返回。中心调度服务器保存有各个存储节点的tcp连接，每隔30s发送一个心跳包，确认连接是否畅通。如果节点没有回复，则说明连接断开，采用数据备份，将服务器数据备份到下一个节点。
 
-![节点断连](img\节点断连.PNG)
+![节点断连](./img/节点断连.PNG)
 
 ​		当有新的coserver连接，计算其哈希值，注册到哈希环中，并将涉及到哈希节点改动的数据进行数据迁移并备份。将不在哈希节点中的数据进行删除。
 
-​	![新增](img\新增.PNG)
+​	![新增](./img/新增.PNG)
 
 ​		利用一个心跳包监听各个slaveServer和coserver是否断开，每30秒监听一次，如果断开，则删除该节点。并将该节点的数据备份到下一个节点的下一个节点。
 
